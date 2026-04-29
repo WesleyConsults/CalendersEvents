@@ -1,7 +1,14 @@
 import { Clock } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 
-const QUICK_LINKS = ['Home', 'About Us', 'Upcoming Events', 'Menu', 'Bookings'];
+const QUICK_LINKS = [
+  { name: 'Home', href: '/' },
+  { name: 'About Us', href: '/about' },
+  { name: 'Upcoming Events', href: '/events' },
+  { name: 'Menu', href: '/menu' },
+  { name: 'Bookings', href: '/booking' },
+];
 const EVENT_LINKS = ['Weddings', 'Birthdays', 'Corporate', 'Live Gigs', 'Film Night'];
 
 export default function Footer() {
@@ -11,7 +18,7 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-12 mb-16">
           {/* Brand */}
           <div className="col-span-1">
-            <div className="flex items-center gap-2 mb-6">
+            <Link href="/" className="flex items-center gap-2 mb-6">
               <Image
                 src="/logo.png"
                 alt="Calenders Events Logo"
@@ -20,7 +27,7 @@ export default function Footer() {
                 className="object-contain"
               />
               <span className="text-2xl font-display font-bold tracking-tight">CALENDERS</span>
-            </div>
+            </Link>
             <p className="text-brand-cream/70 leading-relaxed mb-8">
               The premier destination in Takoradi for events, dining, and vibrant nightlife. We bring
               people together in our unique garden atmosphere.
@@ -39,10 +46,10 @@ export default function Footer() {
             <h5 className="font-bold text-xl mb-6">Quick Links</h5>
             <ul className="space-y-4 text-brand-cream/70">
               {QUICK_LINKS.map((link) => (
-                <li key={link}>
-                  <a href="#" className="hover:text-brand-green transition-colors">
-                    {link}
-                  </a>
+                <li key={link.name}>
+                  <Link href={link.href} className="hover:text-brand-green transition-colors">
+                    {link.name}
+                  </Link>
                 </li>
               ))}
             </ul>

@@ -10,14 +10,8 @@ export default function MenuPreview() {
     <section id="restaurant" className="py-24 bg-brand-cream">
       <div className="container mx-auto px-6">
         {/* Header row */}
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12">
-          <SectionHeading title="A Taste of Authentic Perfection" subtitle="The Menu" />
-          <a
-            href="#contact"
-            className="hidden md:inline-flex items-center gap-2 bg-brand-green text-white px-7 py-3 rounded-full font-semibold text-sm shadow-lg shadow-brand-green/20 hover:bg-brand-green-dark transition-colors mb-12"
-          >
-            View Full Menu <ChevronRight size={16} />
-          </a>
+        <div className="mb-12 text-center">
+          <SectionHeading title="A Taste of Authentic Perfection" subtitle="The Menu" centered />
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
@@ -64,11 +58,7 @@ export default function MenuPreview() {
           ))}
         </div>
 
-        <div className="mt-8 md:hidden">
-          <button className="w-full bg-brand-green text-white py-4 rounded-xl font-semibold text-sm">
-            View Full Menu
-          </button>
-        </div>
+
       </div>
     </section>
   );

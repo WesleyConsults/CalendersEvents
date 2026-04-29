@@ -2,11 +2,12 @@
 
 import { motion } from 'motion/react';
 import { ChevronRight, Star } from 'lucide-react';
+import Link from 'next/link';
 
 export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
-      {/* Background image + layered overlays */}
+      {/* ... (background code) */}
       <div className="absolute inset-0 z-0">
         <img
           src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?auto=format&fit=crop&q=80&w=2000"
@@ -52,18 +53,18 @@ export default function Hero() {
 
           {/* CTAs */}
           <div className="flex flex-wrap gap-4">
-            <a
-              href="#booking"
+            <Link
+              href="/booking"
               className="bg-brand-green hover:bg-brand-green-dark text-white px-8 py-4 rounded-xl text-base font-semibold transition-all hover:scale-105 shadow-2xl shadow-brand-green/40 flex items-center gap-2"
             >
               Book an Event <ChevronRight size={18} />
-            </a>
-            <a
-              href="#restaurant"
+            </Link>
+            <Link
+              href="/menu"
               className="bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/25 text-white px-8 py-4 rounded-xl text-base font-semibold transition-all"
             >
               View Menu
-            </a>
+            </Link>
           </div>
 
           {/* Social proof strip */}
