@@ -22,11 +22,15 @@ export default function Footer() {
               <span className="text-2xl font-display font-bold tracking-tight">CALENDERS</span>
             </div>
             <p className="text-brand-cream/70 leading-relaxed mb-8">
-              The premier destination in Accra for events, dining, and vibrant nightlife. We bring
-              people together.
+              The premier destination in Takoradi for events, dining, and vibrant nightlife. We bring
+              people together in our unique garden atmosphere.
             </p>
-            <div className="flex items-center gap-4 text-xs font-bold uppercase tracking-widest text-brand-cream/40">
-              <Clock size={14} /> Open Daily: 10AM – 2AM
+            <div className="flex flex-col gap-2 text-xs font-bold uppercase tracking-widest text-brand-cream/40">
+              <div className="flex items-center gap-2">
+                <Clock size={14} /> Mon-Thu: 11AM – 1AM
+              </div>
+              <div className="ml-5">Fri-Sat: 11AM – 2AM</div>
+              <div className="ml-5">Sun: 11AM – 11PM</div>
             </div>
           </div>
 

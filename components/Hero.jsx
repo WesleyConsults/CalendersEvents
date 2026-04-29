@@ -33,22 +33,21 @@ export default function Hero() {
             className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-4 py-2 text-xs font-semibold tracking-wider uppercase mb-8"
           >
             <Star size={12} className="text-yellow-400 fill-yellow-400" />
-            Accra&apos;s Premier Events &amp; Dining Venue
+            Takoradi&apos;s Premier Events &amp; Dining Venue
           </motion.div>
 
           {/* Headline */}
           <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-6 leading-[1.05] tracking-tight text-balance">
-            Where great food meets{' '}
+            Calenders Events{' '}
             <em className="not-italic text-brand-cream/80 underline decoration-brand-green decoration-[3px] underline-offset-8">
-              unforgettable
-            </em>{' '}
-            events
+              Bar &amp; Lounge
+            </em>
           </h1>
 
           {/* Subtext */}
           <p className="text-lg md:text-xl text-white/75 mb-10 max-w-xl leading-relaxed font-light">
-            Experience the heart of Ghanaian hospitality — from intimate dinners to grand
-            celebrations, we make every moment matter.
+            Located in the heart of Takoradi&apos;s Harbour Area. Experience the perfect blend of garden-style dining, 
+            brick oven pizza, and vibrant entertainment.
           </p>
 
           {/* CTAs */}
@@ -77,7 +76,7 @@ export default function Hero() {
             {[
               { value: '1,200+', label: 'Events Hosted' },
               { value: '5.0 ★', label: 'Google Rating' },
-              { value: '8 yrs', label: 'In Business' },
+              { value: '7 yrs', label: 'In Business' },
             ].map(({ value, label }) => (
               <div key={label} className="flex flex-col">
                 <span className="text-white font-bold text-lg">{value}</span>

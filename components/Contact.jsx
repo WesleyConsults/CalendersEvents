@@ -5,9 +5,9 @@ const CONTACT_DETAILS = [
   {
     icon: MapPin,
     label: 'Our Location',
-    value: 'Plot 12, Bamboo Street, East Legon, Accra, Ghana',
+    value: 'Revert Lane, Harbour Area (Near Vienna Beach), Takoradi, Ghana',
   },
-  { icon: Phone, label: 'Phone Number', value: '+233 (0) 555 123 456' },
+  { icon: Phone, label: 'Phone Number', value: '+233 50 258 4606 / 055 759 0224' },
   { icon: Mail, label: 'Email Address', value: 'hello@calendersevents.com' },
 ];
 
@@ -54,7 +54,7 @@ export default function Contact() {
               <span className="font-bold text-brand-brown">Interactive Map Loading...</span>
             </div>
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15881.3323281144!2d-0.18732644999999998!3d5.666667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf9ca7e868c227%3A0xe9be94519961633a!2sEast%20Legon%2C%20Accra!5e0!3m2!1sen!2sgh!4v1714560000000!5m2!1sen!2sgh"
+              src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3975.355494126099!2d-1.7516819999999997!3d4.8799899999999985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNMKwNTInNDguMCJOIDE°NDUnMDYuMSJX!5e0!3m2!1sen!2sgh!4v1777470819105!5m2!1sen!2sgh"
               className="absolute inset-0 w-full h-full grayscale hover:grayscale-0 transition-all duration-700 border-0"
               allowFullScreen
               loading="lazy"

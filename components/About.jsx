@@ -5,10 +5,10 @@ import { Utensils, Music, Mic2, Film, ChevronRight } from 'lucide-react';
 import SectionHeading from '@/components/SectionHeading';
 
 const FEATURES = [
-  { icon: Utensils, label: 'Fine Dining', desc: 'Crafted Ghanaian flavors' },
-  { icon: Music, label: 'Live Band', desc: 'Soul-stirring rhythms' },
-  { icon: Mic2, label: 'Karaoke', desc: 'Your stage awaits' },
-  { icon: Film, label: 'Outdoor Movies', desc: 'Cinema under the sky' },
+  { icon: Utensils, label: 'Lush Gardens', desc: 'Open-air garden vibes' },
+  { icon: Music, label: '200 Seater Hall', desc: 'Fully air-conditioned' },
+  { icon: Mic2, label: 'Bridal Suite', desc: 'Part of wedding packages' },
+  { icon: Film, label: 'Brick Oven Pizza', desc: 'Our fresh signature food' },
 ];
 
 export default function About() {
@@ -52,11 +52,16 @@ export default function About() {
 
           {/* Text content */}
           <div>
-            <SectionHeading title="Experience the Vibrant Spirit of Ghana" subtitle="Welcome to Calenders" />
+            <SectionHeading title="Experience the Best of Takoradi" subtitle="Welcome to Calenders" />
             <p className="text-slate-600 text-lg mb-8 leading-relaxed">
-              At Calenders Events, we&apos;ve created a sanctuary where community, culture, and cuisine
-              converge. Nestled in the heart of the city, our space transitions seamlessly from a
-              sun-drenched family restaurant to a lively nightlife hub.
+              Calenders Events was established in 2019 with the simple aim of helping our clients plan and manage their 
+              social events within the Sekondi Takoradi metropolis. Whether it&apos;s in our lush Gardens or our 
+              indoor 200-seater fully air-conditioned Hall, we provide the perfect location to host your special moments.
+            </p>
+            <p className="text-slate-600 text-lg mb-8 leading-relaxed">
+              What sets us apart is our in-house Bridal Suite that can be part of your wedding package. 
+              Enjoy cocktails and good music at our State-of-the-Art Lounge Bar, watch football matches, 
+              and savor our signature freshly baked brick oven Pizza.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10">

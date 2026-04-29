@@ -1,9 +1,9 @@
 import './globals.css';
 
 export const metadata = {
-  title: "Calenders Events — Accra's Premier Venue",
+  title: "Calenders Events Bar & Lounge — Takoradi's Premier Venue",
   description:
-    'Experience the heart of Ghanaian hospitality. From casual dates to grand celebrations, we make every moment matter.',
+    "Experience the best of Takoradi's nightlife and dining. From Reggae Thursdays to our signature brick oven pizza, Calenders Events Bar & Lounge offers a unique garden/beach-style atmosphere for all your social events.",
 };
 
 export default function RootLayout({ children }) {

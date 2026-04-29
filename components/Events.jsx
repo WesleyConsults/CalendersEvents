@@ -86,10 +86,11 @@ export default function Events() {
           })}
         </div>
 
-        <p className="mt-10 text-center text-slate-500 text-sm">
-          Want a private event?{' '}
+        <p className="mt-10 text-center text-slate-500 text-sm max-w-2xl mx-auto">
+          From Valentine&apos;s weekends to Ghana Independence celebrations and private birthday parties, 
+          we host the most memorable themed events in Takoradi.{' '}
           <a href="#contact" className="text-brand-green font-semibold underline underline-offset-4 hover:text-brand-green-dark transition-colors">
-            Talk to our event coordinator →
+            Contact us to plan your special day →
           </a>
         </p>
       </div>

@@ -199,7 +199,7 @@ export default function BookingForm() {
               Message us directly for a quick response and instant confirmation.
             </p>
             <a
-              href="https://wa.me/233000000000"
+              href="https://wa.me/233502584606"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-[#25D366] hover:bg-[#1ebe5d] text-white px-7 py-3.5 rounded-xl font-bold flex items-center gap-2.5 transition-all shadow-lg shadow-green-500/20 text-sm"
