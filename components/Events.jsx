@@ -15,8 +15,8 @@ const EVENT_CONFIG = {
   'Live Band': {
     icon: Music,
     color: 'bg-brand-green',
-    bg: 'from-green-50 to-emerald-50',
-    badge: 'bg-green-100 text-green-700',
+    bg: 'from-yellow-50 to-amber-50',
+    badge: 'bg-yellow-100 text-yellow-700',
   },
   Movie: {
     icon: Film,

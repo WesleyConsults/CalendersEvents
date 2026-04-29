@@ -1,4 +1,5 @@
 import { Clock } from 'lucide-react';
+import Image from 'next/image';
 
 const QUICK_LINKS = ['Home', 'About Us', 'Upcoming Events', 'Menu', 'Bookings'];
 const EVENT_LINKS = ['Weddings', 'Birthdays', 'Corporate', 'Live Gigs', 'Film Night'];
@@ -11,9 +12,13 @@ export default function Footer() {
           {/* Brand */}
           <div className="col-span-1">
             <div className="flex items-center gap-2 mb-6">
-              <div className="w-10 h-10 bg-brand-green rounded-lg flex items-center justify-center text-white font-bold">
-                C
-              </div>
+              <Image
+                src="/logo.png"
+                alt="Calenders Events Logo"
+                width={40}
+                height={40}
+                className="object-contain"
+              />
               <span className="text-2xl font-display font-bold tracking-tight">CALENDERS</span>
             </div>
             <p className="text-brand-cream/70 leading-relaxed mb-8">
