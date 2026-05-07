@@ -6,7 +6,7 @@ const QUICK_LINKS = [
   { name: 'Home', href: '/' },
   { name: 'About Us', href: '/about' },
   { name: 'Upcoming Events', href: '/events' },
-  { name: 'Menu', href: '/menu' },
+  { name: 'Restaurant', href: '/restaurant' },
   { name: 'Bookings', href: '/booking' },
 ];
 const EVENT_LINKS = ['Weddings', 'Birthdays', 'Corporate', 'Live Gigs', 'Film Night'];
@@ -73,7 +73,7 @@ export default function Footer() {
           <div>
             <h5 className="font-bold text-xl mb-6">Newsletter</h5>
             <p className="text-brand-cream/70 mb-6 font-light">
-              Get notified about upcoming events and special menu releases.
+              Get notified about upcoming events and new restaurant and bar specials.
             </p>
             <div className="relative">
               <input

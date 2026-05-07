@@ -1,20 +1,117 @@
 'use client';
 
 import { motion } from 'motion/react';
-import { ChevronRight, Flame } from 'lucide-react';
+import { ChevronRight, Flame, Martini, UtensilsCrossed } from 'lucide-react';
+import Link from 'next/link';
 import SectionHeading from '@/components/SectionHeading';
-import { MENU_HIGHLIGHTS } from '@/lib/data';
+import {
+  MENU_HIGHLIGHTS,
+  RESTAURANT_FEATURES,
+  RESTAURANT_GALLERY,
+  RESTAURANT_MENU_SECTIONS,
+} from '@/lib/data';
 
-export default function MenuPreview() {
+export default function MenuPreview({ detailed = false }) {
   return (
     <section id="restaurant" className="py-24 bg-brand-cream">
-      <div className="container mx-auto px-6">
-        {/* Header row */}
-        <div className="mb-12 text-center">
-          <SectionHeading title="A Taste of Authentic Perfection" subtitle="The Menu" centered />
+      <div className="container mx-auto px-6 space-y-16">
+        <div className="text-center">
+          <SectionHeading title="Restaurant & Bar Experience" subtitle="The Restaurant" centered />
+          <p className="max-w-3xl mx-auto text-slate-600 leading-relaxed">
+            Calenders is more than an event venue. Our restaurant and lounge give guests a warm place to eat,
+            unwind, and enjoy great food, cocktails, and late-night energy before or after every celebration.
+          </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+        <div className="grid lg:grid-cols-[1.2fr_0.8fr] gap-8 items-stretch">
+          <div className="grid sm:grid-cols-2 gap-5">
+            {RESTAURANT_GALLERY.map((space, index) => (
+              <motion.div
+                key={space.title}
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.08 }}
+                className={`relative overflow-hidden rounded-[2rem] ${
+                  index === 0 ? 'sm:col-span-2 aspect-[16/9]' : 'aspect-[4/5]'
+                }`}
+              >
+                <img
+                  src={space.image}
+                  alt={space.title}
+                  className="w-full h-full object-cover"
+                  referrerPolicy="no-referrer"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+                <div className="absolute inset-x-0 bottom-0 p-6 text-white">
+                  <h3 className="text-2xl font-bold">{space.title}</h3>
+                  <p className="mt-2 text-sm text-white/80 max-w-md">{space.description}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className="bg-white rounded-[2rem] p-8 md:p-10 border border-slate-100 shadow-sm flex flex-col justify-between"
+          >
+            <div>
+              <span className="inline-flex items-center gap-2 rounded-full bg-brand-green/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-brand-green">
+                Dining at Calenders
+              </span>
+              <h3 className="mt-6 text-3xl md:text-4xl font-bold text-brand-brown leading-tight">
+                A restaurant guests can enjoy all day and a bar that comes alive at night.
+              </h3>
+              <div className="mt-8 space-y-4">
+                {RESTAURANT_FEATURES.map((feature) => (
+                  <div key={feature} className="flex gap-3">
+                    <div className="mt-1 h-2.5 w-2.5 rounded-full bg-brand-green shrink-0" />
+                    <p className="text-slate-600 leading-relaxed">{feature}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {!detailed && (
+              <div className="mt-8 flex flex-wrap gap-4">
+                <Link
+                  href="/restaurant"
+                  className="inline-flex items-center gap-2 rounded-xl bg-brand-green px-5 py-3 font-semibold text-white transition-colors hover:bg-brand-green-dark"
+                >
+                  Explore Restaurant <ChevronRight size={16} />
+                </Link>
+                <a
+                  href="#restaurant-menu"
+                  className="inline-flex items-center gap-2 rounded-xl border border-brand-green/20 px-5 py-3 font-semibold text-brand-brown transition-colors hover:border-brand-green hover:text-brand-green"
+                >
+                  See Menu & Bar
+                </a>
+              </div>
+            )}
+          </motion.div>
+        </div>
+
+        <div>
+          <div className="mb-8 flex items-center justify-between gap-4 flex-wrap">
+            <div>
+              <h3 className="text-2xl md:text-3xl font-bold text-brand-brown">Guest Favourites</h3>
+              <p className="mt-2 text-slate-500">
+                A quick look at the dishes and drinks guests ask for the most.
+              </p>
+            </div>
+            {!detailed && (
+              <Link
+                href="/restaurant"
+                className="text-sm font-semibold text-brand-green hover:text-brand-green-dark"
+              >
+                View full restaurant page
+              </Link>
+            )}
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {MENU_HIGHLIGHTS.map((item, index) => (
             <motion.div
               key={index}
@@ -57,8 +154,76 @@ export default function MenuPreview() {
             </motion.div>
           ))}
         </div>
+        </div>
 
+        <div id="restaurant-menu" className="grid lg:grid-cols-2 gap-8">
+          {RESTAURANT_MENU_SECTIONS.map((section, index) => {
+            const Icon = index === 0 ? UtensilsCrossed : Martini;
 
+            return (
+              <motion.div
+                key={section.title}
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                className="rounded-[2rem] bg-white border border-slate-100 shadow-sm p-8"
+              >
+                <div className="flex items-start gap-4 mb-6">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-green/10 text-brand-green">
+                    <Icon size={22} />
+                  </div>
+                  <div>
+                    <p className="text-xs font-semibold uppercase tracking-[0.25em] text-brand-green">
+                      {section.subtitle}
+                    </p>
+                    <h3 className="mt-2 text-2xl font-bold text-brand-brown">{section.title}</h3>
+                    <p className="mt-2 text-slate-600 leading-relaxed">{section.description}</p>
+                  </div>
+                </div>
+
+                <div className="space-y-4">
+                  {section.items.map((item) => (
+                    <div
+                      key={item.name}
+                      className="flex items-start justify-between gap-4 rounded-2xl bg-brand-cream px-4 py-4"
+                    >
+                      <div>
+                        <h4 className="font-bold text-brand-brown">{item.name}</h4>
+                        <p className="mt-1 text-sm text-slate-500">{item.note}</p>
+                      </div>
+                      <span className="shrink-0 rounded-full bg-white px-3 py-1 text-sm font-bold text-brand-green shadow-sm">
+                        {item.price}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
+            );
+          })}
+        </div>
+
+        {detailed && (
+          <div className="rounded-[2rem] bg-brand-brown-light px-8 py-10 text-white">
+            <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-[0.25em] text-brand-green">
+                  Reservations & Events
+                </p>
+                <h3 className="mt-3 text-3xl font-bold">Planning an event with food and drinks?</h3>
+                <p className="mt-3 max-w-2xl text-white/75 leading-relaxed">
+                  Let us help you pair the right meals, drinks, and lounge setup with your celebration.
+                </p>
+              </div>
+              <Link
+                href="/booking"
+                className="inline-flex items-center justify-center gap-2 rounded-xl bg-brand-green px-6 py-3 font-semibold text-white transition-colors hover:bg-brand-green-dark"
+              >
+                Book the Venue <ChevronRight size={16} />
+              </Link>
+            </div>
+          </div>
+        )}
       </div>
     </section>
   );

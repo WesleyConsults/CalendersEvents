@@ -60,10 +60,10 @@ export default function Hero() {
               Book an Event <ChevronRight size={18} />
             </Link>
             <Link
-              href="/menu"
+              href="/restaurant"
               className="bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/25 text-white px-8 py-4 rounded-xl text-base font-semibold transition-all"
             >
-              View Menu
+              Explore Restaurant
             </Link>
           </div>
 

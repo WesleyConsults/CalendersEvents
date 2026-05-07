@@ -8,7 +8,7 @@ export const metadata = {
 export default function EventsPage() {
   return (
     <main className="pt-20">
-      <Events />
+      <Events detailed />
     </main>
   );
 }
