@@ -84,8 +84,8 @@ export default function Events({ detailed = false }) {
               className="relative min-h-[360px] overflow-hidden rounded-[2rem]"
             >
               <img
-                src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?auto=format&fit=crop&q=80&w=1200"
-                alt="Calenders live event atmosphere"
+                src="/images/lounge.jpeg"
+                alt="Calenders lounge and event atmosphere"
                 className="absolute inset-0 h-full w-full object-cover"
                 referrerPolicy="no-referrer"
               />
@@ -117,8 +117,14 @@ export default function Events({ detailed = false }) {
                 transition={{ delay: index * 0.12 }}
                 className={`group relative bg-gradient-to-br ${config.bg} rounded-3xl overflow-hidden border border-slate-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col`}
               >
-                {/* Card top accent */}
-                <div className={`h-1.5 w-full ${config.color}`} />
+                {/* Event image */}
+                <div className="h-48 w-full overflow-hidden">
+                  <img
+                    src={event.image}
+                    alt={event.title}
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                </div>
 
                 <div className="p-8 flex-1 flex flex-col">
                   {/* Icon + badge row */}

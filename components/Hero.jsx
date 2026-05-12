@@ -10,8 +10,8 @@ export default function Hero() {
       {/* ... (background code) */}
       <div className="absolute inset-0 z-0">
         <img
-          src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?auto=format&fit=crop&q=80&w=2000"
-          alt="Calenders Events venue"
+          src="/images/seatingnighttime.jpeg"
+          alt="Calenders Events Bar & Lounge - Nighttime Seating"
           className="w-full h-full object-cover"
           referrerPolicy="no-referrer"
         />

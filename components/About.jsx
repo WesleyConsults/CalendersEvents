@@ -26,8 +26,8 @@ export default function About() {
                 className="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl translate-y-8"
               >
                 <img
-                  src="https://images.unsplash.com/photo-1543007630-9710e4a00a20?auto=format&fit=crop&q=80&w=400"
-                  alt="Calenders dining experience"
+                  src="/images/seatingdaytime.jpeg"
+                  alt="Calenders daytime garden seating"
                   className="w-full h-full object-cover"
                   referrerPolicy="no-referrer"
                 />
@@ -40,8 +40,8 @@ export default function About() {
                 className="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl"
               >
                 <img
-                  src="https://images.unsplash.com/photo-1470337458703-46ad1756a187?auto=format&fit=crop&q=80&w=400"
-                  alt="Calenders events atmosphere"
+                  src="/images/entrance.jpeg"
+                  alt="Calenders venue entrance"
                   className="w-full h-full object-cover"
                   referrerPolicy="no-referrer"
                 />
