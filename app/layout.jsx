@@ -19,6 +19,11 @@ export const metadata = {
   title: "Calenders Events Bar & Lounge — Takoradi's Premier Venue",
   description:
     "Experience the best of Takoradi's nightlife and dining. Calenders Events Bar & Lounge offers a unique garden-style atmosphere for all your social events.",
+  icons: {
+    icon: '/logo.png',
+    shortcut: '/logo.png',
+    apple: '/logo.png',
+  },
 };
 
 export default function RootLayout({ children }) {
