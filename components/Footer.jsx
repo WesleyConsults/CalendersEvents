@@ -13,28 +13,28 @@ const EVENT_LINKS = ['Weddings', 'Birthdays', 'Corporate', 'Live Gigs', 'Film Ni
 
 export default function Footer() {
   return (
-    <footer className="bg-brand-brown-light py-20 text-brand-cream">
-      <div className="container mx-auto px-6">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 mb-16">
+    <footer className="bg-brand-brown-light py-10 md:py-20 text-brand-cream">
+      <div className="container mx-auto px-5 md:px-6">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-8 md:gap-12 mb-8 md:mb-16">
           {/* Brand */}
           <div className="col-span-2 md:col-span-1">
-            <Link href="/" className="flex items-center gap-2 mb-6">
+            <Link href="/" className="flex items-center gap-2 mb-4 md:mb-6">
               <Image
                 src="/logo.png"
                 alt="Calenders Events Logo"
                 width={40}
                 height={40}
-                className="object-contain"
+                className="h-8 w-8 object-contain md:h-10 md:w-10"
               />
-              <span className="text-2xl font-display font-bold tracking-tight">CALENDERS</span>
+              <span className="text-xl md:text-2xl font-display font-bold tracking-tight">CALENDERS</span>
             </Link>
-            <p className="text-brand-cream/70 leading-relaxed mb-8">
+            <p className="text-sm md:text-base text-brand-cream/70 leading-6 md:leading-relaxed mb-5 md:mb-8">
               The premier destination in Takoradi for events, dining, and vibrant nightlife. We bring
               people together in our unique garden atmosphere.
             </p>
-            <div className="flex flex-col gap-2 text-xs font-bold uppercase tracking-widest text-brand-cream/40">
+            <div className="flex flex-col gap-1.5 md:gap-2 text-[10px] md:text-xs font-bold uppercase tracking-[0.16em] md:tracking-widest text-brand-cream/40">
               <div className="flex items-center gap-2">
-                <Clock size={14} /> Mon-Thu: 11AM – 1AM
+                <Clock size={12} /> Mon-Thu: 11AM – 1AM
               </div>
               <div className="ml-5">Fri-Sat: 11AM – 2AM</div>
               <div className="ml-5">Sun: 11AM – 11PM</div>
@@ -43,8 +43,8 @@ export default function Footer() {
 
           {/* Quick links */}
           <div>
-            <h5 className="font-bold text-xl mb-6">Quick Links</h5>
-            <ul className="space-y-4 text-brand-cream/70">
+            <h5 className="font-bold text-lg md:text-xl mb-3 md:mb-6">Quick Links</h5>
+            <ul className="space-y-2.5 md:space-y-4 text-sm md:text-base text-brand-cream/70">
               {QUICK_LINKS.map((link) => (
                 <li key={link.name}>
                   <Link href={link.href} className="hover:text-brand-green transition-colors">
@@ -57,8 +57,8 @@ export default function Footer() {
 
           {/* Event types */}
           <div>
-            <h5 className="font-bold text-xl mb-6">Events</h5>
-            <ul className="space-y-4 text-brand-cream/70">
+            <h5 className="font-bold text-lg md:text-xl mb-3 md:mb-6">Events</h5>
+            <ul className="space-y-2.5 md:space-y-4 text-sm md:text-base text-brand-cream/70">
               {EVENT_LINKS.map((link) => (
                 <li key={link}>
                   <a href="#" className="hover:text-brand-green transition-colors">
@@ -68,30 +68,12 @@ export default function Footer() {
               ))}
             </ul>
           </div>
-
-          {/* Newsletter */}
-          <div className="col-span-2 md:col-span-1">
-            <h5 className="font-bold text-xl mb-6">Newsletter</h5>
-            <p className="text-brand-cream/70 mb-6 font-light">
-              Get notified about upcoming events and new restaurant and bar specials.
-            </p>
-            <div className="relative">
-              <input
-                type="email"
-                placeholder="email@address.com"
-                className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder:text-white/30 focus:outline-none focus:ring-1 ring-brand-green"
-              />
-              <button className="absolute right-2 top-2 bottom-2 bg-brand-green text-white px-4 rounded-lg font-bold text-sm">
-                Join
-              </button>
-            </div>
-          </div>
         </div>
 
         {/* Bottom bar */}
-        <div className="pt-8 border-t border-brand-cream/10 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-brand-cream/50">
+        <div className="pt-5 md:pt-8 border-t border-brand-cream/10 flex flex-col md:flex-row justify-between items-center gap-3 md:gap-4 text-center text-xs md:text-sm text-brand-cream/50">
           <p>&copy; 2026 Calenders Events. All rights reserved.</p>
-          <div className="flex gap-8">
+          <div className="flex flex-wrap justify-center gap-5 md:gap-8">
             <a href="#" className="hover:text-brand-green transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-brand-green transition-colors">Terms of Service</a>
           </div>
