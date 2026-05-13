@@ -15,9 +15,9 @@ export default function Footer() {
   return (
     <footer className="bg-brand-brown-light py-20 text-brand-cream">
       <div className="container mx-auto px-6">
-        <div className="grid md:grid-cols-4 gap-12 mb-16">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 mb-16">
           {/* Brand */}
-          <div className="col-span-1">
+          <div className="col-span-2 md:col-span-1">
             <Link href="/" className="flex items-center gap-2 mb-6">
               <Image
                 src="/logo.png"
@@ -70,7 +70,7 @@ export default function Footer() {
           </div>
 
           {/* Newsletter */}
-          <div>
+          <div className="col-span-2 md:col-span-1">
             <h5 className="font-bold text-xl mb-6">Newsletter</h5>
             <p className="text-brand-cream/70 mb-6 font-light">
               Get notified about upcoming events and new restaurant and bar specials.
