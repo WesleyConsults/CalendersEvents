@@ -1,14 +1,13 @@
 'use client';
 
 import { motion } from 'motion/react';
-import { Utensils, Music, Mic2, Film } from 'lucide-react';
+import { Leaf, Wine, Music } from 'lucide-react';
 import SectionHeading from '@/components/SectionHeading';
 
 const FEATURES = [
-  { icon: Utensils, label: 'Lush Gardens', desc: 'Open-air garden vibes' },
-  { icon: Music, label: '200 Seater Hall', desc: 'Fully air-conditioned' },
-  { icon: Mic2, label: 'Bridal Suite', desc: 'Part of wedding packages' },
-  { icon: Film, label: 'Brick Oven Pizza', desc: 'Our fresh signature food' },
+  { icon: Leaf, label: 'Lush Gardens', desc: 'Open-air setting for relaxed dining, social gatherings, and outdoor celebrations.' },
+  { icon: Wine, label: 'Lounge Bar', desc: 'Cocktails, good music, football viewing, and a relaxed nightlife atmosphere.' },
+  { icon: Music, label: 'Live Entertainment', desc: 'Weekly music, karaoke, live band sessions, and special event nights.' },
 ];
 
 export default function About() {
@@ -52,39 +51,43 @@ export default function About() {
 
           {/* Text content */}
           <div>
-            <SectionHeading title="Experience the Best of Takoradi" subtitle="Welcome to Calenders" />
-            <p className="text-slate-600 text-lg mb-8 leading-relaxed">
-              Calenders Events was established in 2019 with the simple aim of helping our clients plan and manage their 
-              social events within the Sekondi Takoradi metropolis. Whether it&apos;s in our lush Gardens or our 
-              indoor 200-seater fully air-conditioned Hall, we provide the perfect location to host your special moments.
+            <SectionHeading title="Welcome to Calenders" />
+            <p className="text-slate-600 text-lg mb-6 leading-relaxed">
+              Calenders Events Bar &amp; Lounge is one of Takoradi&apos;s warmest destinations for dining, drinks, entertainment, and private celebrations. Established in 2019, Calenders was created to help individuals, families, groups, and businesses plan memorable social events within the Sekondi-Takoradi metropolis.
+            </p>
+            <p className="text-slate-600 text-lg mb-6 leading-relaxed">
+              From open-air garden gatherings, Calenders offers flexible spaces for weddings, birthdays, corporate events, receptions, live shows, and private parties.
+            </p>
+            <p className="text-slate-600 text-lg mb-6 leading-relaxed">
+              What makes Calenders different is the way everything comes together in one place. Guests can enjoy our lush garden setting, relax at the lounge bar, watch live football, enjoy cocktails and good music, or share great food with friends and family.
+            </p>
+            <p className="text-slate-600 text-lg mb-6 leading-relaxed">
+              For weddings and special occasions, our in-house bridal suite adds extra convenience and comfort, making it easier for clients to prepare, host, and celebrate without moving between multiple locations.
             </p>
             <p className="text-slate-600 text-lg mb-8 leading-relaxed">
-              What sets us apart is our in-house Bridal Suite that can be part of your wedding package. 
-              Enjoy cocktails and good music at our State-of-the-Art Lounge Bar, watch football matches, 
-              and savor our signature freshly baked brick oven Pizza.
+              At Calenders, we believe every visit should feel relaxed, lively, and memorable — whether you are coming for lunch, a night out, a live band session, or one of life&apos;s biggest celebrations.
             </p>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {FEATURES.map((item, index) => (
                 <motion.div
-                  key={index}
-                  initial={{ opacity: 0, x: 20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
+                  key={item.label}
+                  initial={{ opacity: 0, y: 16 }}
+                  whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                  className="flex items-start gap-4 p-4 rounded-2xl bg-white border border-brand-green/5 shadow-sm"
+                  transition={{ delay: index * 0.08 }}
+                  className="flex items-start gap-3 p-4 rounded-2xl bg-white border border-brand-green/5 shadow-sm"
                 >
                   <div className="w-10 h-10 rounded-xl bg-brand-green/10 text-brand-green flex items-center justify-center shrink-0">
                     <item.icon size={20} />
                   </div>
                   <div>
-                    <h4 className="font-bold text-brand-brown">{item.label}</h4>
-                    <p className="text-xs text-slate-500">{item.desc}</p>
+                    <h4 className="font-bold text-brand-brown text-sm">{item.label}</h4>
+                    <p className="text-xs text-slate-500 mt-0.5 leading-relaxed">{item.desc}</p>
                   </div>
                 </motion.div>
               ))}
             </div>
-
           </div>
         </div>
       </div>
