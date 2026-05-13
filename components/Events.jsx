@@ -6,7 +6,6 @@ import {
   Briefcase,
   Calendar,
   Camera,
-  CheckCircle2,
   Clock,
   Film,
   Gift,
@@ -21,7 +20,6 @@ import SectionHeading from '@/components/SectionHeading';
 import WeeklyLineup from '@/components/WeeklyLineup';
 import {
   EVENT_GALLERY_IMAGES,
-  EVENT_SERVICES,
   PRIVATE_EVENT_TYPES,
   UPCOMING_EVENTS,
   WEEKLY_LINEUP,
@@ -218,39 +216,6 @@ export default function Events({ detailed = false }) {
                     </motion.article>
                   );
                 })}
-              </div>
-            </div>
-          </div>
-
-          <div className="bg-brand-cream py-24">
-            <div className="container mx-auto px-6">
-              <div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-12 items-center">
-                <div>
-                  <p className="eyebrow mb-2">
-                    What We Provide
-                  </p>
-                  <h2 className="section-title text-brand-brown">Everything Guests Need in One Place</h2>
-                  <p className="mt-5 text-slate-600 leading-relaxed">
-                    The biggest advantage is convenience: the restaurant, bar, entertainment,
-                    and venue setup can work together under one plan.
-                  </p>
-                </div>
-
-                <div className="grid sm:grid-cols-2 gap-4">
-                  {EVENT_SERVICES.map((service, index) => (
-                    <motion.div
-                      key={service}
-                      initial={{ opacity: 0, y: 16 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ delay: index * 0.05 }}
-                      className="flex gap-3 rounded-2xl bg-white p-5 shadow-sm border border-slate-100"
-                    >
-                      <CheckCircle2 size={20} className="mt-0.5 shrink-0 text-brand-green" />
-                      <p className="text-sm font-medium leading-relaxed text-slate-700">{service}</p>
-                    </motion.div>
-                  ))}
-                </div>
               </div>
             </div>
           </div>
