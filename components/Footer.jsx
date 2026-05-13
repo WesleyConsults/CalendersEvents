@@ -26,13 +26,13 @@ export default function Footer() {
                 height={40}
                 className="h-8 w-8 object-contain md:h-10 md:w-10"
               />
-              <span className="text-xl md:text-2xl font-display font-bold tracking-tight">CALENDERS</span>
+              <span className="text-xl md:text-2xl font-display font-bold">CALENDERS</span>
             </Link>
             <p className="text-sm md:text-base text-brand-cream/70 leading-6 md:leading-relaxed mb-5 md:mb-8">
               The premier destination in Takoradi for events, dining, and vibrant nightlife. We bring
               people together in our unique garden atmosphere.
             </p>
-            <div className="flex flex-col gap-1.5 md:gap-2 text-[10px] md:text-xs font-bold uppercase tracking-[0.16em] md:tracking-widest text-brand-cream/40">
+            <div className="flex flex-col gap-1.5 md:gap-2 text-[10px] md:text-xs font-bold uppercase tracking-[0.08em] text-brand-cream/40">
               <div className="flex items-center gap-2">
                 <Clock size={12} /> Mon-Thu: 11AM – 1AM
               </div>
@@ -43,7 +43,7 @@ export default function Footer() {
 
           {/* Quick links */}
           <div>
-            <h5 className="font-bold text-lg md:text-xl mb-3 md:mb-6">Quick Links</h5>
+            <h5 className="font-sans font-bold text-base md:text-lg mb-3 md:mb-6">Quick Links</h5>
             <ul className="space-y-2.5 md:space-y-4 text-sm md:text-base text-brand-cream/70">
               {QUICK_LINKS.map((link) => (
                 <li key={link.name}>
@@ -57,7 +57,7 @@ export default function Footer() {
 
           {/* Event types */}
           <div>
-            <h5 className="font-bold text-lg md:text-xl mb-3 md:mb-6">Events</h5>
+            <h5 className="font-sans font-bold text-base md:text-lg mb-3 md:mb-6">Events</h5>
             <ul className="space-y-2.5 md:space-y-4 text-sm md:text-base text-brand-cream/70">
               {EVENT_LINKS.map((link) => (
                 <li key={link}>

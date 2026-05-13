@@ -1,6 +1,19 @@
+import { Fraunces, Manrope } from 'next/font/google';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import './globals.css';
+
+const manrope = Manrope({
+  subsets: ['latin'],
+  variable: '--font-body',
+  display: 'swap',
+});
+
+const fraunces = Fraunces({
+  subsets: ['latin'],
+  variable: '--font-heading',
+  display: 'swap',
+});
 
 export const metadata = {
   title: "Calenders Events Bar & Lounge — Takoradi's Premier Venue",
@@ -11,7 +24,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="min-h-screen selection:bg-brand-green/20 selection:text-brand-green-dark">
+      <body className={`${manrope.variable} ${fraunces.variable} min-h-screen selection:bg-brand-green/20 selection:text-brand-green-dark`}>
         <Navbar />
         {children}
         <Footer />

@@ -13,7 +13,7 @@ export default function SectionHeading({ title, subtitle, centered = false }) {
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="text-brand-green font-semibold tracking-widest uppercase text-xs mb-2 block"
+        className="eyebrow mb-2"
       >
         {subtitle || 'Discover More'}
       </motion.span>
@@ -22,7 +22,7 @@ export default function SectionHeading({ title, subtitle, centered = false }) {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ delay: 0.1 }}
-        className="text-4xl md:text-5xl text-brand-brown font-bold"
+        className="section-title text-brand-brown"
       >
         {title}
       </motion.h2>

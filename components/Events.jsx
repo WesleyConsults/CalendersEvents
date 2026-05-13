@@ -65,13 +65,13 @@ export default function Events({ detailed = false }) {
               <div className="mt-8 flex flex-wrap gap-4">
                 <Link
                   href="/booking"
-                  className="inline-flex items-center gap-2 rounded-xl bg-brand-green px-6 py-3 font-semibold text-white transition-colors hover:bg-brand-green-dark"
+                  className="button-text inline-flex items-center gap-2 rounded-xl bg-brand-green px-6 py-3 text-white transition-colors hover:bg-brand-green-dark"
                 >
                   Plan an Event <ArrowRight size={16} />
                 </Link>
                 <a
                   href="#weekly-lineup"
-                  className="inline-flex items-center gap-2 rounded-xl border border-brand-green/20 px-6 py-3 font-semibold text-brand-brown transition-colors hover:border-brand-green hover:text-brand-green"
+                  className="button-text inline-flex items-center gap-2 rounded-xl border border-brand-green/20 px-6 py-3 text-brand-brown transition-colors hover:border-brand-green hover:text-brand-green"
                 >
                   See Weekly Lineup
                 </a>
@@ -95,7 +95,7 @@ export default function Events({ detailed = false }) {
                   <MapPin size={16} className="text-brand-green" />
                   Takoradi Harbour Area
                 </div>
-                <h3 className="mt-3 text-3xl font-bold">Weekly shows, private parties, and nights that feel alive.</h3>
+                <h3 className="card-title mt-3 text-3xl">Weekly shows, private parties, and nights that feel alive.</h3>
               </div>
             </motion.div>
           </div>
@@ -132,13 +132,13 @@ export default function Events({ detailed = false }) {
                     <div className={`w-12 h-12 rounded-2xl ${config.color} text-white flex items-center justify-center shadow-md`}>
                       <Icon size={22} />
                     </div>
-                    <span className={`text-[11px] font-bold px-3 py-1 rounded-full uppercase tracking-wider ${config.badge}`}>
+                    <span className={`text-[11px] font-bold px-3 py-1 rounded-full uppercase tracking-[0.08em] ${config.badge}`}>
                       {event.type}
                     </span>
                   </div>
 
                   {/* Title */}
-                  <h3 className="text-xl font-bold text-brand-brown mb-2 leading-snug">
+                  <h3 className="card-title text-xl text-brand-brown mb-2">
                     {event.title}
                   </h3>
 
@@ -156,7 +156,7 @@ export default function Events({ detailed = false }) {
                   {/* CTA */}
                   <Link
                     href="/booking"
-                    className="mt-6 w-full bg-white hover:bg-brand-brown hover:text-white border border-slate-200 text-brand-brown py-3 rounded-xl font-semibold text-sm transition-all flex items-center justify-center gap-2 group-hover:border-brand-brown"
+                    className="button-text mt-6 w-full bg-white hover:bg-brand-brown hover:text-white border border-slate-200 text-brand-brown py-3 rounded-xl text-sm transition-all flex items-center justify-center gap-2 group-hover:border-brand-brown"
                   >
                     Reserve a Spot <ArrowRight size={15} />
                   </Link>
@@ -172,7 +172,7 @@ export default function Events({ detailed = false }) {
             we host the most memorable themed events in Takoradi.{' '}
             <Link
               href="/events"
-              className="text-brand-green font-semibold underline underline-offset-4 hover:text-brand-green-dark transition-colors"
+                  className="font-bold text-brand-green underline underline-offset-4 hover:text-brand-green-dark transition-colors"
             >
               Explore all events →
             </Link>
@@ -187,10 +187,10 @@ export default function Events({ detailed = false }) {
           <div className="bg-brand-brown-light py-24 text-white">
             <div className="container mx-auto px-6">
               <div className="mb-12 max-w-3xl">
-                <p className="text-brand-green font-semibold tracking-widest uppercase text-xs mb-2">
+                <p className="eyebrow mb-2">
                   Private Events
                 </p>
-                <h2 className="text-4xl md:text-5xl font-bold">Book the Space for Your Own Celebration</h2>
+                <h2 className="section-title text-white">Book the Space for Your Own Celebration</h2>
                 <p className="mt-5 text-brand-cream/70 leading-relaxed">
                   Calenders works for intimate family moments, polished corporate gatherings,
                   and entertainment-led nights where food, music, and drinks all matter.
@@ -213,7 +213,7 @@ export default function Events({ detailed = false }) {
                       <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-green text-white">
                         <Icon size={22} />
                       </div>
-                      <h3 className="mt-6 text-xl font-bold">{event.title}</h3>
+                      <h3 className="card-title mt-6 text-xl">{event.title}</h3>
                       <p className="mt-3 text-sm text-brand-cream/70 leading-relaxed">{event.description}</p>
                     </motion.article>
                   );
@@ -226,10 +226,10 @@ export default function Events({ detailed = false }) {
             <div className="container mx-auto px-6">
               <div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-12 items-center">
                 <div>
-                  <p className="text-brand-green font-semibold tracking-widest uppercase text-xs mb-2">
+                  <p className="eyebrow mb-2">
                     What We Provide
                   </p>
-                  <h2 className="text-4xl md:text-5xl text-brand-brown font-bold">Everything Guests Need in One Place</h2>
+                  <h2 className="section-title text-brand-brown">Everything Guests Need in One Place</h2>
                   <p className="mt-5 text-slate-600 leading-relaxed">
                     The biggest advantage is convenience: the restaurant, bar, entertainment,
                     and venue setup can work together under one plan.
@@ -259,14 +259,14 @@ export default function Events({ detailed = false }) {
             <div className="container mx-auto px-6">
               <div className="mb-12 flex flex-col md:flex-row md:items-end md:justify-between gap-6">
                 <div>
-                  <p className="text-brand-green font-semibold tracking-widest uppercase text-xs mb-2">
+                  <p className="eyebrow mb-2">
                     Event Moments
                   </p>
-                  <h2 className="text-4xl md:text-5xl text-brand-brown font-bold">The Atmosphere Guests Remember</h2>
+                  <h2 className="section-title text-brand-brown">The Atmosphere Guests Remember</h2>
                 </div>
                 <Link
                   href="/#gallery"
-                  className="hidden rounded-xl border border-brand-green/20 px-5 py-3 text-sm font-semibold text-brand-brown transition-colors hover:border-brand-green hover:text-brand-green md:inline-flex"
+                  className="button-text hidden rounded-xl border border-brand-green/20 px-5 py-3 text-sm text-brand-brown transition-colors hover:border-brand-green hover:text-brand-green md:inline-flex"
                 >
                   View Gallery
                 </Link>
@@ -289,7 +289,7 @@ export default function Events({ detailed = false }) {
                       referrerPolicy="no-referrer"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/10 to-transparent" />
-                    <figcaption className="absolute bottom-0 left-0 right-0 p-5 text-lg font-bold text-white">
+                    <figcaption className="card-title absolute bottom-0 left-0 right-0 p-5 text-lg text-white">
                       {item.title}
                     </figcaption>
                   </motion.figure>
@@ -302,17 +302,17 @@ export default function Events({ detailed = false }) {
             <div className="container mx-auto px-6">
               <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
                 <div>
-                  <p className="text-brand-green font-semibold tracking-widest uppercase text-xs mb-2">
+                  <p className="eyebrow mb-2">
                     Ready to Host?
                   </p>
-                  <h2 className="text-3xl md:text-5xl font-bold">Tell us the date, guest count, and vibe.</h2>
+                  <h2 className="section-title-sm">Tell us the date, guest count, and vibe.</h2>
                   <p className="mt-4 max-w-2xl text-brand-cream/70 leading-relaxed">
                     We can help shape the food, drinks, seating, entertainment, and event flow around your occasion.
                   </p>
                 </div>
                 <Link
                   href="/booking"
-                  className="inline-flex items-center justify-center gap-2 rounded-xl bg-brand-green px-7 py-4 font-semibold text-white transition-colors hover:bg-brand-green-dark"
+                  className="button-text inline-flex items-center justify-center gap-2 rounded-xl bg-brand-green px-7 py-4 text-white transition-colors hover:bg-brand-green-dark"
                 >
                   Start Booking <ArrowRight size={18} />
                 </Link>

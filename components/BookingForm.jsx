@@ -49,10 +49,10 @@ export default function BookingForm() {
       <div className="container mx-auto px-6 relative z-10">
         {/* Section label */}
         <div className="text-center mb-12">
-          <span className="text-brand-cream/60 font-semibold tracking-widest uppercase text-xs block mb-2">
+          <span className="eyebrow mb-2 text-brand-cream/70">
             Make a Reservation
           </span>
-          <h2 className="text-4xl md:text-5xl font-bold text-white text-balance">
+          <h2 className="section-title text-white">
             Ready to Book Your Event?
           </h2>
         </div>
@@ -60,7 +60,7 @@ export default function BookingForm() {
         <div className="max-w-4xl mx-auto bg-white rounded-3xl overflow-hidden shadow-2xl flex flex-col md:flex-row">
           {/* ── Form Column ── */}
           <div className="md:w-[55%] p-8 md:p-12">
-            <h3 className="text-2xl font-bold text-brand-brown mb-1">Book Your Experience</h3>
+            <h3 className="card-title text-2xl text-brand-brown mb-1">Book Your Experience</h3>
             <p className="text-slate-500 text-sm mb-8">
               Fill out the form and we&apos;ll confirm your booking within 24 hours.
             </p>
@@ -71,7 +71,7 @@ export default function BookingForm() {
                 <div className="w-20 h-20 rounded-full bg-brand-green/10 flex items-center justify-center">
                   <CheckCircle2 size={48} className="text-brand-green" />
                 </div>
-                <h4 className="text-2xl font-bold text-brand-brown">Booking request sent!</h4>
+                <h4 className="font-sans text-2xl font-bold text-brand-brown">Booking request sent!</h4>
                 <p className="text-slate-500 text-sm max-w-xs leading-relaxed">
                   We&apos;ll reach out shortly to confirm the details. Can&apos;t wait to host you at
                   Calenders Events!
@@ -90,7 +90,7 @@ export default function BookingForm() {
                 <div>
                   <label
                     htmlFor="name"
-                    className="block text-xs font-bold uppercase tracking-wider text-brand-green mb-1.5"
+                    className="block text-xs font-bold uppercase tracking-[0.08em] text-brand-green mb-1.5"
                   >
                     Full Name
                   </label>
@@ -111,7 +111,7 @@ export default function BookingForm() {
                   <div>
                     <label
                       htmlFor="date"
-                      className="block text-xs font-bold uppercase tracking-wider text-brand-green mb-1.5"
+                      className="block text-xs font-bold uppercase tracking-[0.08em] text-brand-green mb-1.5"
                     >
                       Date
                     </label>
@@ -128,7 +128,7 @@ export default function BookingForm() {
                   <div>
                     <label
                       htmlFor="guests"
-                      className="block text-xs font-bold uppercase tracking-wider text-brand-green mb-1.5"
+                      className="block text-xs font-bold uppercase tracking-[0.08em] text-brand-green mb-1.5"
                     >
                       Guests
                     </label>
@@ -151,7 +151,7 @@ export default function BookingForm() {
                 <div>
                   <label
                     htmlFor="eventType"
-                    className="block text-xs font-bold uppercase tracking-wider text-brand-green mb-1.5"
+                    className="block text-xs font-bold uppercase tracking-[0.08em] text-brand-green mb-1.5"
                   >
                     Event Type
                   </label>
@@ -174,7 +174,7 @@ export default function BookingForm() {
                 <button
                   type="submit"
                   disabled={loading}
-                  className="w-full bg-brand-green text-white py-4 rounded-xl font-bold shadow-lg shadow-brand-green/25 hover:bg-brand-green-dark disabled:opacity-70 disabled:cursor-not-allowed transition-all flex items-center justify-center gap-2"
+                  className="button-text w-full bg-brand-green text-white py-4 rounded-xl shadow-lg shadow-brand-green/25 hover:bg-brand-green-dark disabled:opacity-70 disabled:cursor-not-allowed transition-all flex items-center justify-center gap-2"
                 >
                   {loading ? (
                     <>
@@ -194,7 +194,7 @@ export default function BookingForm() {
             <div className="w-20 h-20 bg-brand-green rounded-full flex items-center justify-center text-white mb-6 shadow-lg shadow-brand-green/20">
               <MessageCircle size={36} />
             </div>
-            <h3 className="text-xl font-bold text-brand-brown mb-3">Prefer WhatsApp?</h3>
+            <h3 className="card-title text-xl text-brand-brown mb-3">Prefer WhatsApp?</h3>
             <p className="text-slate-500 text-sm mb-8 max-w-[220px] leading-relaxed">
               Message us directly for a quick response and instant confirmation.
             </p>
@@ -202,7 +202,7 @@ export default function BookingForm() {
               href="https://wa.me/233502584606"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-[#25D366] hover:bg-[#1ebe5d] text-white px-7 py-3.5 rounded-xl font-bold flex items-center gap-2.5 transition-all shadow-lg shadow-green-500/20 text-sm"
+              className="button-text bg-[#25D366] hover:bg-[#1ebe5d] text-white px-7 py-3.5 rounded-xl flex items-center gap-2.5 transition-all shadow-lg shadow-green-500/20 text-sm"
             >
               <MessageCircle size={18} />
               Book via WhatsApp
@@ -212,13 +212,13 @@ export default function BookingForm() {
             <div className="mt-10 pt-8 border-t border-brand-brown/10 w-full grid grid-cols-2 divide-x divide-brand-brown/10">
               <div className="text-center pr-4">
                 <span className="block text-2xl font-bold text-brand-green">5.0 ★</span>
-                <span className="text-[10px] uppercase tracking-widest text-slate-400 font-bold mt-1 block">
+                <span className="text-[10px] uppercase tracking-[0.08em] text-slate-400 font-bold mt-1 block">
                   Google Rating
                 </span>
               </div>
               <div className="text-center pl-4">
                 <span className="block text-2xl font-bold text-brand-green">1.2k+</span>
-                <span className="text-[10px] uppercase tracking-widest text-slate-400 font-bold mt-1 block">
+                <span className="text-[10px] uppercase tracking-[0.08em] text-slate-400 font-bold mt-1 block">
                   Events Hosted
                 </span>
               </div>

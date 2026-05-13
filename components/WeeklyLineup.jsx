@@ -10,10 +10,10 @@ export default function WeeklyLineup() {
       <div className="container mx-auto px-6">
         <div className="mb-12 flex flex-col md:flex-row md:items-end md:justify-between gap-6">
           <div>
-            <p className="text-brand-green font-semibold tracking-widest uppercase text-xs mb-2">
+            <p className="eyebrow mb-2">
               Weekly Lineup
             </p>
-            <h2 className="text-4xl md:text-5xl text-brand-brown font-bold">Your Week at Calenders</h2>
+            <h2 className="section-title text-brand-brown">Your Week at Calenders</h2>
           </div>
           <p className="max-w-xl text-slate-600 leading-relaxed">
             A simple rhythm guests can remember: live music during the week, karaoke on Saturday,
@@ -32,14 +32,14 @@ export default function WeeklyLineup() {
               className="bg-white rounded-[2rem] p-7 border border-slate-100 shadow-sm"
             >
               <div className="flex items-center justify-between gap-4">
-                <span className="text-xs font-bold uppercase tracking-[0.25em] text-brand-green">
+                <span className="eyebrow">
                   {item.day}
                 </span>
                 <span className="inline-flex items-center gap-1.5 rounded-full bg-brand-cream px-3 py-1 text-sm font-semibold text-brand-brown">
                   <Clock size={14} /> {item.time}
                 </span>
               </div>
-              <h3 className="mt-8 text-2xl font-bold text-brand-brown">{item.title}</h3>
+              <h3 className="card-title mt-8 text-2xl text-brand-brown">{item.title}</h3>
               <p className="mt-2 font-semibold text-slate-700">{item.mood}</p>
               <p className="mt-4 text-sm text-slate-600 leading-relaxed">{item.highlight}</p>
             </motion.article>

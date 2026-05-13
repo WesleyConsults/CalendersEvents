@@ -45,7 +45,7 @@ export default function Navbar() {
             className="object-contain"
           />
           <span
-            className={`text-xl font-display font-bold tracking-tight ${
+            className={`text-xl font-display font-bold ${
               isScrolled || !isHome ? 'text-brand-green' : 'text-white'
             }`}
           >
@@ -59,7 +59,7 @@ export default function Navbar() {
             <Link
               key={link.name}
               href={link.href}
-              className={`text-sm font-medium transition-colors ${
+              className={`text-sm font-semibold transition-colors ${
                 isScrolled || !isHome ? 'text-slate-600 hover:text-brand-green' : 'text-white/80 hover:text-white'
               }`}
             >
@@ -68,7 +68,7 @@ export default function Navbar() {
           ))}
           <Link 
             href="/booking"
-            className="bg-brand-green text-white px-6 py-2 rounded-full text-sm font-semibold hover:bg-brand-green-dark transition-colors shadow-lg shadow-brand-green/20"
+            className="button-text bg-brand-green text-white px-6 py-2 rounded-full text-sm hover:bg-brand-green-dark transition-colors shadow-lg shadow-brand-green/20"
           >
             Book Now
           </Link>
@@ -99,7 +99,7 @@ export default function Navbar() {
                   key={link.name}
                   href={link.href}
                   onClick={() => setIsMenuOpen(false)}
-                  className="text-lg font-display text-brand-brown hover:text-brand-green transition-colors"
+                  className="text-base font-semibold text-brand-brown hover:text-brand-green transition-colors"
                 >
                   {link.name}
                 </Link>
@@ -107,7 +107,7 @@ export default function Navbar() {
               <Link
                 href="/booking"
                 onClick={() => setIsMenuOpen(false)}
-                className="bg-brand-green text-white px-6 py-3 rounded-xl font-semibold text-center"
+                className="button-text bg-brand-green text-white px-6 py-3 rounded-xl text-center"
               >
                 Book an Event
               </Link>

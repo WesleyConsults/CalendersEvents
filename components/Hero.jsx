@@ -27,7 +27,7 @@ export default function Hero() {
           className="max-w-3xl"
         >
           {/* Headline */}
-          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-6 leading-[1.05] tracking-tight text-balance">
+          <h1 className="hero-title mb-6">
             Calenders Events{' '}
             <em className="not-italic text-brand-cream/80 underline decoration-brand-green decoration-[3px] underline-offset-8">
               Bar &amp; Lounge
@@ -44,13 +44,13 @@ export default function Hero() {
           <div className="flex flex-wrap gap-4">
             <Link
               href="/booking"
-              className="bg-brand-green hover:bg-brand-green-dark text-white px-8 py-4 rounded-xl text-base font-semibold transition-all hover:scale-105 shadow-2xl shadow-brand-green/40 flex items-center gap-2"
+              className="button-text bg-brand-green hover:bg-brand-green-dark text-white px-8 py-4 rounded-xl text-base transition-all hover:scale-105 shadow-2xl shadow-brand-green/40 flex items-center gap-2"
             >
               Book an Event <ChevronRight size={18} />
             </Link>
             <Link
               href="/restaurant"
-              className="bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/25 text-white px-8 py-4 rounded-xl text-base font-semibold transition-all"
+              className="button-text bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/25 text-white px-8 py-4 rounded-xl text-base transition-all"
             >
               Explore Restaurant
             </Link>
@@ -70,7 +70,7 @@ export default function Hero() {
             ].map(({ value, label }) => (
               <div key={label} className="flex flex-col">
                 <span className="text-white font-bold text-lg">{value}</span>
-                <span className="text-xs tracking-wide">{label}</span>
+                <span className="text-xs">{label}</span>
               </div>
             ))}
           </motion.div>

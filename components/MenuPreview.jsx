@@ -44,7 +44,7 @@ export default function MenuPreview({ detailed = false }) {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
                 <div className="absolute inset-x-0 bottom-0 p-6 text-white">
-                  <h3 className="text-2xl font-bold">{space.title}</h3>
+                  <h3 className="card-title text-2xl">{space.title}</h3>
                   <p className="mt-2 text-sm text-white/80 max-w-md">{space.description}</p>
                 </div>
               </motion.div>
@@ -58,10 +58,10 @@ export default function MenuPreview({ detailed = false }) {
             className="bg-white rounded-[2rem] p-8 md:p-10 border border-slate-100 shadow-sm flex flex-col justify-between"
           >
             <div>
-              <span className="inline-flex items-center gap-2 rounded-full bg-brand-green/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-brand-green">
+              <span className="inline-flex items-center gap-2 rounded-full bg-brand-green/10 px-4 py-2 text-xs font-bold uppercase tracking-[0.08em] text-brand-green">
                 Dining at Calenders
               </span>
-              <h3 className="mt-6 text-3xl md:text-4xl font-bold text-brand-brown leading-tight">
+              <h3 className="card-title mt-6 text-3xl md:text-4xl text-brand-brown">
                 A restaurant guests can enjoy all day and a bar that comes alive at night.
               </h3>
               <div className="mt-8 space-y-4">
@@ -78,13 +78,13 @@ export default function MenuPreview({ detailed = false }) {
               <div className="mt-8 flex flex-wrap gap-4">
                 <Link
                   href="/restaurant"
-                  className="inline-flex items-center gap-2 rounded-xl bg-brand-green px-5 py-3 font-semibold text-white transition-colors hover:bg-brand-green-dark"
+                  className="button-text inline-flex items-center gap-2 rounded-xl bg-brand-green px-5 py-3 text-white transition-colors hover:bg-brand-green-dark"
                 >
                   Explore Restaurant <ChevronRight size={16} />
                 </Link>
                 <a
                   href="#restaurant-menu"
-                  className="inline-flex items-center gap-2 rounded-xl border border-brand-green/20 px-5 py-3 font-semibold text-brand-brown transition-colors hover:border-brand-green hover:text-brand-green"
+                  className="button-text inline-flex items-center gap-2 rounded-xl border border-brand-green/20 px-5 py-3 text-brand-brown transition-colors hover:border-brand-green hover:text-brand-green"
                 >
                   See Menu & Bar
                 </a>
@@ -96,7 +96,7 @@ export default function MenuPreview({ detailed = false }) {
         <div>
           <div className="mb-8 flex items-center justify-between gap-4 flex-wrap">
             <div>
-              <h3 className="text-2xl md:text-3xl font-bold text-brand-brown">Guest Favourites</h3>
+              <h3 className="card-title text-2xl md:text-3xl text-brand-brown">Guest Favourites</h3>
               <p className="mt-2 text-slate-500">
                 A quick look at the dishes and drinks guests ask for the most.
               </p>
@@ -104,7 +104,7 @@ export default function MenuPreview({ detailed = false }) {
             {!detailed && (
               <Link
                 href="/restaurant"
-                className="text-sm font-semibold text-brand-green hover:text-brand-green-dark"
+                className="text-sm font-bold text-brand-green hover:text-brand-green-dark"
               >
                 View full restaurant page
               </Link>
@@ -174,10 +174,10 @@ export default function MenuPreview({ detailed = false }) {
                     <Icon size={22} />
                   </div>
                   <div>
-                    <p className="text-xs font-semibold uppercase tracking-[0.25em] text-brand-green">
+                    <p className="eyebrow">
                       {section.subtitle}
                     </p>
-                    <h3 className="mt-2 text-2xl font-bold text-brand-brown">{section.title}</h3>
+                    <h3 className="card-title mt-2 text-2xl text-brand-brown">{section.title}</h3>
                     <p className="mt-2 text-slate-600 leading-relaxed">{section.description}</p>
                   </div>
                 </div>
@@ -207,17 +207,17 @@ export default function MenuPreview({ detailed = false }) {
           <div className="rounded-[2rem] bg-brand-brown-light px-8 py-10 text-white">
             <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
               <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.25em] text-brand-green">
+                <p className="eyebrow">
                   Reservations & Events
                 </p>
-                <h3 className="mt-3 text-3xl font-bold">Planning an event with food and drinks?</h3>
+                <h3 className="card-title mt-3 text-3xl">Planning an event with food and drinks?</h3>
                 <p className="mt-3 max-w-2xl text-white/75 leading-relaxed">
                   Let us help you pair the right meals, drinks, and lounge setup with your celebration.
                 </p>
               </div>
               <Link
                 href="/booking"
-                className="inline-flex items-center justify-center gap-2 rounded-xl bg-brand-green px-6 py-3 font-semibold text-white transition-colors hover:bg-brand-green-dark"
+                className="button-text inline-flex items-center justify-center gap-2 rounded-xl bg-brand-green px-6 py-3 text-white transition-colors hover:bg-brand-green-dark"
               >
                 Book the Venue <ChevronRight size={16} />
               </Link>
