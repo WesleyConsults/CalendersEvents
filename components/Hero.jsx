@@ -36,8 +36,7 @@ export default function Hero() {
 
           {/* Subtext */}
           <p className="text-lg md:text-xl text-white/75 mb-10 max-w-xl leading-relaxed font-light">
-            Located in the heart of Takoradi&apos;s Harbour Area. Experience the perfect blend of garden-style dining, 
-            brick oven pizza, and vibrant entertainment.
+            Located in the heart of Takoradi&apos;s Harbour Area. Experience the perfect blend of garden-style dining and vibrant entertainment.
           </p>
 
           {/* CTAs */}
