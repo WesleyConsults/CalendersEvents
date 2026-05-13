@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'motion/react';
-import { ChevronRight, Star } from 'lucide-react';
+import { ChevronRight } from 'lucide-react';
 import Link from 'next/link';
 
 export default function Hero() {
@@ -26,17 +26,6 @@ export default function Hero() {
           transition={{ duration: 0.9, ease: 'easeOut' }}
           className="max-w-3xl"
         >
-          {/* Badge */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.2 }}
-            className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-4 py-2 text-xs font-semibold tracking-wider uppercase mb-8"
-          >
-            <Star size={12} className="text-yellow-400 fill-yellow-400" />
-            Takoradi&apos;s Premier Events &amp; Dining Venue
-          </motion.div>
-
           {/* Headline */}
           <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-6 leading-[1.05] tracking-tight text-balance">
             Calenders Events{' '}
@@ -72,12 +61,12 @@ export default function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6 }}
-            className="flex flex-wrap items-center gap-6 mt-14 pt-8 border-t border-white/10 text-white/60 text-sm"
+            className="flex flex-wrap items-center gap-6 mt-12 pt-8 border-t border-white/10 text-white/60 text-sm"
           >
             {[
-              { value: '1,200+', label: 'Events Hosted' },
+              { value: '150+', label: 'Events Hosted' },
               { value: '5.0 ★', label: 'Google Rating' },
-              { value: '7 yrs', label: 'In Business' },
+              { value: '5 yrs', label: 'In Business' },
             ].map(({ value, label }) => (
               <div key={label} className="flex flex-col">
                 <span className="text-white font-bold text-lg">{value}</span>
@@ -87,17 +76,6 @@ export default function Hero() {
           </motion.div>
         </motion.div>
       </div>
-
-      {/* Scroll indicator */}
-      <motion.div
-        animate={{ y: [0, 10, 0] }}
-        transition={{ repeat: Infinity, duration: 2, ease: 'easeInOut' }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2"
-      >
-        <div className="w-6 h-10 border-2 border-white/20 rounded-full flex justify-center pt-2">
-          <div className="w-1 h-2 bg-brand-green rounded-full" />
-        </div>
-      </motion.div>
     </section>
   );
 }
