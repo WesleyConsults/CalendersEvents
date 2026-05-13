@@ -21,7 +21,6 @@ import SectionHeading from '@/components/SectionHeading';
 import WeeklyLineup from '@/components/WeeklyLineup';
 import {
   EVENT_GALLERY_IMAGES,
-  EVENT_JOURNEY,
   EVENT_SERVICES,
   PRIVATE_EVENT_TYPES,
   UPCOMING_EVENTS,
@@ -184,40 +183,6 @@ export default function Events({ detailed = false }) {
       {detailed && (
         <>
           <WeeklyLineup />
-
-          <div className="py-24 bg-white">
-            <div className="container mx-auto px-6">
-              <div className="grid lg:grid-cols-[0.85fr_1.15fr] gap-12 items-start">
-                <div>
-                  <p className="text-brand-green font-semibold tracking-widest uppercase text-xs mb-2">
-                    Event Flow
-                  </p>
-                  <h2 className="text-4xl md:text-5xl text-brand-brown font-bold">How the Night Comes Together</h2>
-                  <p className="mt-5 text-slate-600 leading-relaxed">
-                    The venue is built to move guests naturally from arrival to dining, drinks,
-                    entertainment, and celebration without feeling scattered.
-                  </p>
-                </div>
-
-                <div className="grid sm:grid-cols-2 gap-5">
-                  {EVENT_JOURNEY.map((item, index) => (
-                    <motion.div
-                      key={item.step}
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ delay: index * 0.08 }}
-                      className="rounded-[2rem] border border-slate-100 bg-brand-cream p-6"
-                    >
-                      <span className="text-sm font-bold text-brand-green">{item.step}</span>
-                      <h3 className="mt-4 text-2xl font-bold text-brand-brown">{item.title}</h3>
-                      <p className="mt-3 text-sm text-slate-600 leading-relaxed">{item.description}</p>
-                    </motion.div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
 
           <div className="bg-brand-brown-light py-24 text-white">
             <div className="container mx-auto px-6">

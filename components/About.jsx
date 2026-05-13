@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'motion/react';
-import { Utensils, Music, Mic2, Film, ChevronRight } from 'lucide-react';
+import { Utensils, Music, Mic2, Film } from 'lucide-react';
 import SectionHeading from '@/components/SectionHeading';
 
 const FEATURES = [
@@ -85,10 +85,6 @@ export default function About() {
               ))}
             </div>
 
-            <button className="text-brand-green font-bold flex items-center gap-2 group">
-              Discover our story{' '}
-              <ChevronRight size={20} className="group-hover:translate-x-1 transition-transform" />
-            </button>
           </div>
         </div>
       </div>
