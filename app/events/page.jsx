@@ -7,7 +7,7 @@ export const metadata = {
 
 export default function EventsPage() {
   return (
-    <main className="pt-20">
+    <main className="pt-16 md:pt-20">
       <Events detailed />
     </main>
   );

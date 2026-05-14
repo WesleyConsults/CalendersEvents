@@ -67,7 +67,7 @@ export default function Navbar() {
             </Link>
           ))}
           <Link 
-            href="/booking"
+            href="/contact#book-event"
             className="button-text bg-brand-green text-white px-6 py-2 rounded-full text-sm hover:bg-brand-green-dark transition-colors shadow-lg shadow-brand-green/20"
           >
             Book Now
@@ -105,7 +105,7 @@ export default function Navbar() {
                 </Link>
               ))}
               <Link
-                href="/booking"
+                href="/contact#book-event"
                 onClick={() => setIsMenuOpen(false)}
                 className="button-text bg-brand-green text-white px-6 py-3 rounded-xl text-center"
               >

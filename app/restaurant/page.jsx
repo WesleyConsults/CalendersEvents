@@ -7,7 +7,7 @@ export const metadata = {
 
 export default function RestaurantPage() {
   return (
-    <main className="pt-20">
+    <main className="pt-16 md:pt-20">
       <MenuPreview detailed />
     </main>
   );

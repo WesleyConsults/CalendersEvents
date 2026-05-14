@@ -1,4 +1,4 @@
-import { Clock } from 'lucide-react';
+import { Clock, Facebook, Instagram, MessageCircle, Music2 } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -7,9 +7,15 @@ const QUICK_LINKS = [
   { name: 'About Us', href: '/about' },
   { name: 'Upcoming Events', href: '/events' },
   { name: 'Restaurant', href: '/restaurant' },
-  { name: 'Bookings', href: '/booking' },
+  { name: 'Bookings', href: '/contact#book-event' },
 ];
 const EVENT_LINKS = ['Weddings', 'Birthdays', 'Corporate', 'Live Gigs', 'Film Night'];
+const SOCIAL_LINKS = [
+  { name: 'WhatsApp', href: 'https://wa.me/233502584606', icon: MessageCircle },
+  { name: 'Facebook', href: '#', icon: Facebook },
+  { name: 'Instagram', href: '#', icon: Instagram },
+  { name: 'TikTok', href: '#', icon: Music2 },
+];
 
 export default function Footer() {
   return (
@@ -38,6 +44,23 @@ export default function Footer() {
               </div>
               <div className="ml-5">Fri-Sat: 11AM – 2AM</div>
               <div className="ml-5">Sun: 11AM – 11PM</div>
+            </div>
+            <div className="mt-6">
+              <h5 className="font-sans text-xs font-bold uppercase tracking-[0.08em] text-brand-cream/50">
+                Follow Us
+              </h5>
+              <div className="mt-3 flex gap-3">
+                {SOCIAL_LINKS.map(({ name, href, icon: Icon }) => (
+                  <a
+                    key={name}
+                    href={href}
+                    aria-label={name}
+                    className="flex h-11 w-11 items-center justify-center rounded-full border border-brand-cream/10 bg-brand-cream/10 text-brand-cream transition-colors hover:border-brand-green hover:bg-brand-green"
+                  >
+                    <Icon size={19} />
+                  </a>
+                ))}
+              </div>
             </div>
           </div>
 

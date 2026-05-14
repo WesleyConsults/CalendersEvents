@@ -6,7 +6,6 @@ import {
   Briefcase,
   Calendar,
   Camera,
-  Clock,
   Film,
   Gift,
   Heart,
@@ -17,12 +16,10 @@ import {
 } from 'lucide-react';
 import Link from 'next/link';
 import SectionHeading from '@/components/SectionHeading';
-import WeeklyLineup from '@/components/WeeklyLineup';
 import {
   EVENT_GALLERY_IMAGES,
   PRIVATE_EVENT_TYPES,
   UPCOMING_EVENTS,
-  WEEKLY_LINEUP,
 } from '@/lib/data';
 
 const EVENT_CONFIG = {
@@ -51,29 +48,15 @@ const PRIVATE_EVENT_ICONS = [Heart, Gift, Briefcase, Camera];
 export default function Events({ detailed = false }) {
   return (
     <section id="events" className="bg-white">
-      <div className="container mx-auto px-6 py-24">
+      <div className="container mx-auto px-6 py-12 md:py-24">
         {detailed ? (
-          <div className="mb-16 grid lg:grid-cols-[1.1fr_0.9fr] gap-10 items-center">
+          <div className="mb-12 md:mb-16 grid lg:grid-cols-[1.1fr_0.9fr] gap-10 items-center">
             <div>
               <SectionHeading title="Events at Calenders" subtitle="Live Nights & Private Celebrations" />
               <p className="text-lg text-slate-600 leading-relaxed max-w-2xl">
                 From weekly entertainment nights to fully hosted private celebrations, Calenders brings
                 food, drinks, music, and garden-style atmosphere together in one venue.
               </p>
-              <div className="mt-8 flex flex-wrap gap-4">
-                <Link
-                  href="/booking"
-                  className="button-text inline-flex items-center gap-2 rounded-xl bg-brand-green px-6 py-3 text-white transition-colors hover:bg-brand-green-dark"
-                >
-                  Plan an Event <ArrowRight size={16} />
-                </Link>
-                <a
-                  href="#weekly-lineup"
-                  className="button-text inline-flex items-center gap-2 rounded-xl border border-brand-green/20 px-6 py-3 text-brand-brown transition-colors hover:border-brand-green hover:text-brand-green"
-                >
-                  See Weekly Lineup
-                </a>
-              </div>
             </div>
 
             <motion.div
@@ -153,7 +136,7 @@ export default function Events({ detailed = false }) {
 
                   {/* CTA */}
                   <Link
-                    href="/booking"
+                    href="/contact#book-event"
                     className="button-text mt-6 w-full bg-white hover:bg-brand-brown hover:text-white border border-slate-200 text-brand-brown py-3 rounded-xl text-sm transition-all flex items-center justify-center gap-2 group-hover:border-brand-brown"
                   >
                     Reserve a Spot <ArrowRight size={15} />
@@ -180,9 +163,7 @@ export default function Events({ detailed = false }) {
 
       {detailed && (
         <>
-          <WeeklyLineup />
-
-          <div className="bg-brand-brown-light py-24 text-white">
+          <div className="bg-brand-brown-light py-12 md:py-24 text-white">
             <div className="container mx-auto px-6">
               <div className="mb-12 max-w-3xl">
                 <p className="eyebrow mb-2">
@@ -193,6 +174,12 @@ export default function Events({ detailed = false }) {
                   Calenders works for intimate family moments, polished corporate gatherings,
                   and entertainment-led nights where food, music, and drinks all matter.
                 </p>
+                <Link
+                  href="/contact#book-event"
+                  className="button-text mt-7 inline-flex items-center gap-2 rounded-xl bg-brand-green px-6 py-3 text-white transition-colors hover:bg-brand-green-dark"
+                >
+                  Plan an Event <ArrowRight size={16} />
+                </Link>
               </div>
 
               <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
@@ -220,7 +207,7 @@ export default function Events({ detailed = false }) {
             </div>
           </div>
 
-          <div className="py-24 bg-white">
+          <div className="py-12 md:py-24 bg-white">
             <div className="container mx-auto px-6">
               <div className="mb-12 flex flex-col md:flex-row md:items-end md:justify-between gap-6">
                 <div>
@@ -263,7 +250,7 @@ export default function Events({ detailed = false }) {
             </div>
           </div>
 
-          <div className="bg-brand-brown-light py-20 text-white">
+          <div className="bg-brand-brown-light py-12 md:py-20 text-white">
             <div className="container mx-auto px-6">
               <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
                 <div>
@@ -276,7 +263,7 @@ export default function Events({ detailed = false }) {
                   </p>
                 </div>
                 <Link
-                  href="/booking"
+                  href="/contact#book-event"
                   className="button-text inline-flex items-center justify-center gap-2 rounded-xl bg-brand-green px-7 py-4 text-white transition-colors hover:bg-brand-green-dark"
                 >
                   Start Booking <ArrowRight size={18} />

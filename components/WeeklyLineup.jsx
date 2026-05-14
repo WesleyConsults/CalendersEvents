@@ -6,7 +6,7 @@ import { WEEKLY_LINEUP } from '@/lib/data';
 
 export default function WeeklyLineup() {
   return (
-    <section id="weekly-lineup" className="bg-brand-cream py-24">
+    <section id="weekly-lineup" className="bg-brand-cream py-12 md:py-24">
       <div className="container mx-auto px-6">
         <div className="mb-12 flex flex-col md:flex-row md:items-end md:justify-between gap-6">
           <div>

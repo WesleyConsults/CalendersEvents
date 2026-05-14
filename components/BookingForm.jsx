@@ -18,7 +18,7 @@ const INITIAL_FORM = {
   eventType: 'Dining Reservation',
 };
 
-export default function BookingForm() {
+export default function BookingForm({ sectionId = 'booking' }) {
   const [form, setForm] = useState(INITIAL_FORM);
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -40,7 +40,7 @@ export default function BookingForm() {
   };
 
   return (
-    <section id="booking" className="py-24 bg-brand-green relative overflow-hidden">
+    <section id={sectionId} className="py-12 md:py-24 bg-brand-green relative overflow-hidden scroll-mt-24">
       {/* Decorative background watermark */}
       <div className="absolute top-0 right-0 p-16 opacity-[0.07] pointer-events-none select-none">
         <Calendar size={420} strokeWidth={0.5} />

@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden">
+    <section className="relative min-h-[88svh] md:min-h-screen flex items-start md:items-center overflow-hidden">
       {/* ... (background code) */}
       <div className="absolute inset-0 z-0">
         <img
@@ -19,7 +19,7 @@ export default function Hero() {
       </div>
 
       {/* Hero content */}
-      <div className="container mx-auto px-6 relative z-10 text-white pt-32 pb-20">
+      <div className="container mx-auto px-6 relative z-10 text-white pt-28 pb-16 md:pt-32 md:pb-20">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
@@ -42,14 +42,14 @@ export default function Hero() {
           {/* CTAs */}
           <div className="flex flex-wrap gap-4">
             <Link
-              href="/booking"
-              className="button-text bg-brand-green hover:bg-brand-green-dark text-white px-8 py-4 rounded-xl text-base transition-all hover:scale-105 shadow-2xl shadow-brand-green/40 flex items-center gap-2"
+              href="/contact#book-event"
+              className="button-text bg-brand-green hover:bg-brand-green-dark text-white px-6 py-3.5 md:px-7 md:py-4 rounded-xl text-sm md:text-base transition-all hover:scale-105 shadow-2xl shadow-brand-green/40 flex items-center gap-2"
             >
               Book an Event <ChevronRight size={18} />
             </Link>
             <Link
               href="/restaurant"
-              className="button-text bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/25 text-white px-8 py-4 rounded-xl text-base transition-all"
+              className="button-text bg-white hover:bg-brand-cream border border-white text-brand-brown px-6 py-3.5 md:px-7 md:py-4 rounded-xl text-sm md:text-base transition-all"
             >
               Explore Restaurant
             </Link>
