@@ -7,23 +7,20 @@ import SectionHeading from '@/components/SectionHeading';
 import { GALLERY_IMAGES } from '@/lib/data';
 
 /**
- * Determines grid span classes for the masonry-style layout.
- * index 0: tall left card (row-span-2)
- * index 5: wide bottom card (col-span-2, landscape)
- * rest: normal square cells
+ * Mobile uses a 6-column magazine grid: one large feature image,
+ * two smaller companion tiles, then mixed medium/wide moments.
  */
 function getGridClass(index) {
-  if (index === 0) return 'md:col-span-2 md:row-span-2';
-  if (index === 3) return 'md:row-span-2';
-  if (index === 5) return 'md:col-span-2';
-  return '';
-}
+  const mobileLayout = [
+    'col-span-4 row-span-3 md:col-span-2 md:row-span-2',
+    'col-span-2 row-span-2 md:col-span-1 md:row-span-1',
+    'col-span-2 row-span-1 md:col-span-1 md:row-span-1',
+    'col-span-3 row-span-2 md:col-span-1 md:row-span-2',
+    'col-span-3 row-span-2 md:col-span-1 md:row-span-1',
+    'col-span-6 row-span-2 md:col-span-2 md:row-span-1',
+  ];
 
-function getAspectClass(index) {
-  if (index === 0) return 'aspect-[4/3] md:aspect-auto';
-  if (index === 3) return 'aspect-[3/4] md:aspect-auto';
-  if (index === 5) return 'aspect-video';
-  return index % 2 === 0 ? 'aspect-square' : 'aspect-[4/5]';
+  return mobileLayout[index] ?? 'col-span-3 row-span-2 md:col-span-1 md:row-span-1';
 }
 
 export default function Gallery() {
@@ -45,7 +42,7 @@ export default function Gallery() {
         <SectionHeading title="Moments We've Shared" subtitle="Our Gallery" centered />
 
         {/* Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 md:auto-rows-[180px] lg:auto-rows-[220px] gap-3 md:gap-4">
+        <div className="grid grid-cols-6 auto-rows-[78px] gap-3 md:grid-cols-4 md:auto-rows-[180px] md:gap-4 lg:auto-rows-[220px]">
           {GALLERY_IMAGES.map((src, index) => (
             <motion.button
               key={index}
@@ -55,7 +52,7 @@ export default function Gallery() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.06, duration: 0.4 }}
-              className={`relative overflow-hidden rounded-2xl group cursor-pointer ${getGridClass(index)} ${getAspectClass(index)}`}
+              className={`relative overflow-hidden rounded-2xl group cursor-pointer ${getGridClass(index)}`}
               aria-label={`Preview gallery photo ${index + 1}`}
             >
               <img
