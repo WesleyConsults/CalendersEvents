@@ -1,28 +1,24 @@
 'use client';
 
-import { CalendarHeart, Martini, Music2, Trees } from 'lucide-react';
 import { motion } from 'motion/react';
+import Image from 'next/image';
 
 const OFFERS = [
   {
     title: 'Events & Celebrations',
-    description: 'Weddings, birthdays, parties, corporate gatherings, and private bookings.',
-    icon: CalendarHeart,
+    image: '/images/offers/events-and-celebrations-card.png',
   },
   {
     title: 'Restaurant & Bar',
-    description: 'Good food, drinks, relaxed seating, and group hangouts.',
-    icon: Martini,
+    image: '/images/offers/restaurant-and-bar-card.png',
   },
   {
     title: 'Live Entertainment',
-    description: 'Reggae nights, karaoke, live band, and weekend experiences.',
-    icon: Music2,
+    image: '/images/offers/live-entertainment-card.png',
   },
   {
     title: 'Garden Atmosphere',
-    description: 'Open-air setting, warm ambience, and a casual, family-friendly environment.',
-    icon: Trees,
+    image: '/images/offers/garden-atmosphere-card.png',
   },
 ];
 
@@ -39,20 +35,24 @@ export default function WhatWeOffer() {
         </div>
 
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          {OFFERS.map(({ title, description, icon: Icon }, index) => (
+          {OFFERS.map(({ title, image }, index) => (
             <motion.article
               key={title}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.08 }}
-              className="rounded-[1.5rem] border border-slate-100 bg-white p-6 shadow-sm"
+              className="group overflow-hidden rounded-[1.5rem] border border-slate-100 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
             >
-              <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-green/10 text-brand-green">
-                <Icon size={22} />
+              <div className="relative aspect-[4/3] overflow-hidden bg-brand-brown-light">
+                <Image
+                  src={image}
+                  alt={title}
+                  fill
+                  sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                />
               </div>
-              <h3 className="card-title text-xl text-brand-brown">{title}</h3>
-              <p className="mt-3 text-sm leading-relaxed text-slate-600">{description}</p>
             </motion.article>
           ))}
         </div>

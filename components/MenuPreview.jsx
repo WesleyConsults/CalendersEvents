@@ -1,27 +1,45 @@
 'use client';
 
+import { useMemo, useState } from 'react';
 import { motion } from 'motion/react';
-import { ChevronRight, Flame, Martini, UtensilsCrossed } from 'lucide-react';
+import { ChevronRight, Download, ExternalLink, Flame, Martini, MessageCircle, UtensilsCrossed } from 'lucide-react';
 import Link from 'next/link';
 import SectionHeading from '@/components/SectionHeading';
 import {
+  MENU_FILTERS,
   MENU_HIGHLIGHTS,
+  RESTAURANT_FULL_MENU,
   RESTAURANT_FEATURES,
   RESTAURANT_GALLERY,
   RESTAURANT_MENU_SECTIONS,
 } from '@/lib/data';
 
+const menuPosterImage = '/images/menu/calenders-menu-poster.png';
+const whatsAppLink = 'https://wa.me/233502584606';
+
 export default function MenuPreview({ detailed = false }) {
+  const [activeCategory, setActiveCategory] = useState('All');
+
+  const visibleMenuCategories = useMemo(() => {
+    if (activeCategory === 'All') {
+      return RESTAURANT_FULL_MENU;
+    }
+
+    return RESTAURANT_FULL_MENU.filter((category) => category.title === activeCategory);
+  }, [activeCategory]);
+
   return (
     <section id="restaurant" className="py-12 md:py-24 bg-brand-cream">
       <div className="container mx-auto px-6 space-y-10 md:space-y-16">
-        <div className="text-center">
-          <SectionHeading title="Restaurant & Bar Experience" subtitle="The Restaurant" centered />
-          <p className="max-w-3xl mx-auto text-slate-600 leading-relaxed">
-            Calenders is more than an event venue. Our restaurant and lounge give guests a warm place to eat,
-            unwind, and enjoy great food, cocktails, and late-night energy before or after every celebration.
-          </p>
-        </div>
+        {!detailed && (
+          <div className="text-center">
+            <SectionHeading title="Restaurant & Bar Experience" subtitle="The Restaurant" centered />
+            <p className="max-w-3xl mx-auto text-slate-600 leading-relaxed">
+              Calenders is more than an event venue. Our restaurant and lounge give guests a warm place to eat,
+              unwind, and enjoy great food, cocktails, and late-night energy before or after every celebration.
+            </p>
+          </div>
+        )}
 
         {!detailed && (
           <>
@@ -204,23 +222,132 @@ export default function MenuPreview({ detailed = false }) {
         )}
 
         {detailed && (
-          <div className="rounded-[2rem] bg-brand-brown-light px-6 py-8 md:px-8 md:py-10 text-white">
-            <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
-              <div>
-                <p className="eyebrow">
-                  Reservations & Events
-                </p>
-                <h3 className="card-title mt-3 text-3xl">Planning an event with food and drinks?</h3>
-                <p className="mt-3 max-w-2xl text-white/75 leading-relaxed">
-                  Let us help you pair the right meals, drinks, and lounge setup with your celebration.
+          <div className="space-y-10 md:space-y-14">
+            <div className="relative overflow-hidden rounded-[2rem] border border-[#E7D6C4] bg-[#FFF8EC] px-6 py-10 shadow-sm md:px-10 md:py-14">
+              <div className="absolute inset-x-0 top-0 h-1.5 brand-button-gradient" />
+              <div className="absolute inset-y-0 right-0 w-2 bg-[#7A1D73]/10" />
+              <div className="absolute inset-y-0 left-0 w-2 bg-[#E66C19]/10" />
+              <div className="relative mx-auto max-w-4xl text-center">
+                <p className="eyebrow">Restaurant</p>
+                <h1 className="section-title mt-4 text-[#6F173F]">Calenders Menu</h1>
+                <p className="mx-auto mt-5 max-w-3xl text-base text-slate-700 md:text-lg">
+                  Explore our food menu — from starters and rice dishes to charcoal grill specials,
+                  sandwiches, kebabs, and group-friendly meals.
                 </p>
               </div>
-              <Link
-                href="/contact#book-event"
-                className="button-text inline-flex items-center justify-center gap-2 rounded-xl bg-brand-green px-6 py-3 text-white transition-colors hover:bg-brand-green-dark"
-              >
-                Book the Venue <ChevronRight size={16} />
-              </Link>
+            </div>
+
+            <div id="restaurant-menu" className="space-y-8">
+              <div className="flex gap-3 overflow-x-auto pb-2 md:flex-wrap md:justify-center md:overflow-visible">
+                {MENU_FILTERS.map((filter) => {
+                  const isActive = filter === activeCategory;
+
+                  return (
+                    <button
+                      key={filter}
+                      type="button"
+                      onClick={() => setActiveCategory(filter)}
+                      className={`button-text shrink-0 rounded-full border px-4 py-2.5 font-menu-text text-base tracking-[0.02em] transition-all md:px-5 ${
+                        isActive
+                          ? 'border-[#6F173F] bg-[#6F173F] text-white shadow-md shadow-[#6F173F]/20'
+                          : 'border-[#E7D6C4] bg-white/80 text-brand-brown hover:border-brand-green hover:text-brand-green'
+                      }`}
+                    >
+                      {filter}
+                    </button>
+                  );
+                })}
+              </div>
+
+              <div className="grid gap-5 lg:grid-cols-2 lg:gap-7">
+                {visibleMenuCategories.map((category, index) => (
+                  <motion.article
+                    key={category.title}
+                    initial={{ opacity: 0, y: 18 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: index * 0.04 }}
+                    className="group rounded-[1.5rem] border border-[#E7D6C4] bg-[#FFFDF8] p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-[#7A1D73]/10 md:p-6"
+                  >
+                    <div className="mb-5 flex items-center justify-between gap-4 border-b border-[#E7D6C4] pb-4">
+                      <h2 className="font-menu-display text-3xl uppercase tracking-[0.06em] text-[#6F173F] md:text-4xl">
+                        {category.title}
+                      </h2>
+                      <span className="h-2.5 w-2.5 rounded-full bg-brand-green shadow-[0_0_0_6px_rgba(232,98,26,0.12)]" />
+                    </div>
+
+                    <div className="space-y-3">
+                      {category.items.map((item) => (
+                        <div
+                          key={item.name}
+                          className="flex flex-col gap-1 rounded-2xl bg-[#FFF8EC] px-4 py-3 sm:flex-row sm:items-start sm:justify-between sm:gap-5"
+                        >
+                          <h3 className="min-w-0 break-words font-menu-text text-xl font-medium leading-snug tracking-[0.01em] text-slate-800 md:text-[1.35rem]">
+                            {item.name}
+                          </h3>
+                          <span className="shrink-0 whitespace-nowrap font-menu-text text-lg font-bold leading-snug tracking-[0.01em] text-brand-green sm:text-right md:text-xl">
+                            {item.price}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+                  </motion.article>
+                ))}
+              </div>
+
+              <p className="text-center text-sm font-medium text-slate-500">Prices may be subject to change.</p>
+            </div>
+
+            <div className="rounded-[1.5rem] border border-[#E7D6C4] bg-white px-5 py-6 shadow-sm md:px-8">
+              <div className="flex flex-col gap-5 md:flex-row md:items-center md:justify-between">
+                <p className="max-w-xl text-slate-600">
+                  Prefer the original poster version? View or download the full menu below.
+                </p>
+                <div className="flex flex-col gap-3 sm:flex-row">
+                  <a
+                    href={menuPosterImage}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="button-text inline-flex items-center justify-center gap-2 rounded-xl border border-[#6F173F]/20 px-5 py-3 text-[#6F173F] transition-colors hover:border-[#6F173F] hover:bg-[#6F173F] hover:text-white"
+                  >
+                    View Full Menu Poster <ExternalLink size={16} />
+                  </a>
+                  <a
+                    href={menuPosterImage}
+                    download
+                    className="button-text inline-flex items-center justify-center gap-2 rounded-xl bg-brand-green px-5 py-3 text-white transition-colors hover:bg-brand-green-dark"
+                  >
+                    Download Menu Poster <Download size={16} />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div className="rounded-[2rem] bg-brand-brown-light px-6 py-8 text-white md:px-8 md:py-10">
+              <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+                <div>
+                  <p className="eyebrow">Reservations & Events</p>
+                  <h3 className="card-title mt-3 text-3xl">Planning a meal, hangout, or private event?</h3>
+                  <p className="mt-3 max-w-2xl text-white/75 leading-relaxed">
+                    Let us help you pair the right meals, drinks, and lounge setup with your celebration.
+                  </p>
+                </div>
+                <div className="flex flex-col gap-3 sm:flex-row">
+                  <Link
+                    href="/contact#book-event"
+                    className="button-text inline-flex items-center justify-center gap-2 rounded-xl bg-brand-green px-6 py-3 text-white transition-colors hover:bg-brand-green-dark"
+                  >
+                    Book Now <ChevronRight size={16} />
+                  </Link>
+                  <a
+                    href={whatsAppLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="button-text inline-flex items-center justify-center gap-2 rounded-xl bg-white px-6 py-3 text-brand-brown transition-colors hover:bg-brand-cream"
+                  >
+                    Contact Us on WhatsApp <MessageCircle size={16} />
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         )}

@@ -1,4 +1,4 @@
-import { Fraunces, Manrope } from 'next/font/google';
+import { Barlow_Condensed, Bebas_Neue, Fraunces, Manrope } from 'next/font/google';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import './globals.css';
@@ -12,6 +12,20 @@ const manrope = Manrope({
 const fraunces = Fraunces({
   subsets: ['latin'],
   variable: '--font-heading',
+  display: 'swap',
+});
+
+const bebasNeue = Bebas_Neue({
+  subsets: ['latin'],
+  weight: '400',
+  variable: '--font-menu-heading',
+  display: 'swap',
+});
+
+const barlowCondensed = Barlow_Condensed({
+  subsets: ['latin'],
+  weight: ['500', '600', '700'],
+  variable: '--font-menu-body',
   display: 'swap',
 });
 
@@ -29,7 +43,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${manrope.variable} ${fraunces.variable} min-h-screen selection:bg-brand-green/20 selection:text-brand-green-dark`}>
+      <body className={`${manrope.variable} ${fraunces.variable} ${bebasNeue.variable} ${barlowCondensed.variable} min-h-screen selection:bg-brand-green/20 selection:text-brand-green-dark`}>
         <Navbar />
         {children}
         <Footer />
