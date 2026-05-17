@@ -38,15 +38,12 @@ export default function Navbar() {
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
           <Image
-            src="/logo.png"
+            src="/calenders-wordmark.png"
             alt="Calenders Events Logo"
-            width={40}
+            width={160}
             height={40}
-            className="object-contain"
+            className="h-10 w-auto object-contain"
           />
-          <span className="brand-text-gradient text-xl font-display font-bold">
-            CALENDERS
-          </span>
         </Link>
 
         {/* Desktop links */}

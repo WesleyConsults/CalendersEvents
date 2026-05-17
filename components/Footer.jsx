@@ -26,13 +26,12 @@ export default function Footer() {
           <div className="col-span-2 md:col-span-1">
             <Link href="/" className="flex items-center gap-2 mb-4 md:mb-6">
               <Image
-                src="/logo.png"
+                src="/calenders-wordmark.png"
                 alt="Calenders Events Logo"
-                width={40}
-                height={40}
-                className="h-8 w-8 object-contain md:h-10 md:w-10"
+                width={176}
+                height={44}
+                className="h-9 w-auto object-contain md:h-11"
               />
-              <span className="brand-text-gradient text-xl md:text-2xl font-display font-bold">CALENDERS</span>
             </Link>
             <p className="text-sm md:text-base text-brand-cream/70 leading-6 md:leading-relaxed mb-5 md:mb-8">
               The premier destination in Takoradi for events, dining, and vibrant nightlife. We bring
