@@ -32,7 +32,7 @@ export default function Footer() {
                 height={40}
                 className="h-8 w-8 object-contain md:h-10 md:w-10"
               />
-              <span className="text-xl md:text-2xl font-display font-bold">CALENDERS</span>
+              <span className="brand-text-gradient text-xl md:text-2xl font-display font-bold">CALENDERS</span>
             </Link>
             <p className="text-sm md:text-base text-brand-cream/70 leading-6 md:leading-relaxed mb-5 md:mb-8">
               The premier destination in Takoradi for events, dining, and vibrant nightlife. We bring

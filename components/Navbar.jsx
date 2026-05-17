@@ -44,11 +44,7 @@ export default function Navbar() {
             height={40}
             className="object-contain"
           />
-          <span
-            className={`text-xl font-display font-bold ${
-              isScrolled || !isHome ? 'text-brand-green' : 'text-white'
-            }`}
-          >
+          <span className="brand-text-gradient text-xl font-display font-bold">
             CALENDERS
           </span>
         </Link>
@@ -68,7 +64,7 @@ export default function Navbar() {
           ))}
           <Link 
             href="/contact#book-event"
-            className="button-text bg-brand-green text-white px-6 py-2 rounded-full text-sm hover:bg-brand-green-dark transition-colors shadow-lg shadow-brand-green/20"
+            className="brand-button-gradient button-text text-white px-6 py-2 rounded-full text-sm transition-all shadow-lg"
           >
             Book Now
           </Link>
@@ -107,7 +103,7 @@ export default function Navbar() {
               <Link
                 href="/contact#book-event"
                 onClick={() => setIsMenuOpen(false)}
-                className="button-text bg-brand-green text-white px-6 py-3 rounded-xl text-center"
+                className="brand-button-gradient button-text text-white px-6 py-3 rounded-xl text-center shadow-lg"
               >
                 Book an Event
               </Link>

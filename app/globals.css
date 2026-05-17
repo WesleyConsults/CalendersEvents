@@ -90,6 +90,23 @@
     @apply font-sans font-bold;
     letter-spacing: 0.01em;
   }
+
+  .brand-text-gradient {
+    background: linear-gradient(90deg, #EBA217 0%, #E66C19 28%, #CE2932 55%, #7A1D73 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .brand-button-gradient {
+    background: linear-gradient(90deg, #EBA217 0%, #E66C19 28%, #CE2932 55%, #7A1D73 100%);
+    box-shadow: 0 12px 28px rgb(122 29 115 / 0.24);
+  }
+
+  .brand-button-gradient:hover {
+    background: linear-gradient(90deg, #E66C19 0%, #CE2932 45%, #7A1D73 100%);
+    box-shadow: 0 14px 32px rgb(122 29 115 / 0.32);
+  }
 }
 
 @layer utilities {

@@ -43,15 +43,9 @@ export default function Hero() {
           <div className="flex flex-wrap gap-4">
             <Link
               href="/contact#book-event"
-              className="button-text bg-brand-green hover:bg-brand-green-dark text-white px-6 py-3.5 md:px-7 md:py-4 rounded-xl text-sm md:text-base transition-all hover:scale-105 shadow-2xl shadow-brand-green/40 flex items-center gap-2"
+              className="brand-button-gradient button-text text-white px-6 py-3.5 md:px-7 md:py-4 rounded-xl text-sm md:text-base transition-all hover:scale-105 shadow-2xl flex items-center gap-2"
             >
               Book an Event <ChevronRight size={18} />
-            </Link>
-            <Link
-              href="/restaurant"
-              className="button-text bg-white hover:bg-brand-cream border border-white text-brand-brown px-6 py-3.5 md:px-7 md:py-4 rounded-xl text-sm md:text-base transition-all"
-            >
-              Explore Restaurant
             </Link>
           </div>
 
