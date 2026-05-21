@@ -22,12 +22,12 @@ const ABOUT_IMAGES = [
     className: '',
   },
   {
-    src: '/images/events/calenders-wedding-event.png',
+    src: '/images/events/calenders-wedding-event.webp',
     alt: 'Wedding event setup at Calenders',
     className: 'translate-y-8',
   },
   {
-    src: '/images/events/calenders-movie-in-the-park-01.png',
+    src: '/images/events/calenders-movie-in-the-park-01.webp',
     alt: 'Movie in the park setup at Calenders',
     className: '',
   },

@@ -13,6 +13,7 @@ export default function Hero() {
           src="/images/seatingnighttime.jpeg"
           alt="Calenders Events Bar & Lounge - Nighttime Seating"
           className="w-full h-full object-cover"
+          fetchPriority="high"
           referrerPolicy="no-referrer"
         />
         <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/40 to-brand-green/30" />
