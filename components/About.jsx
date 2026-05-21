@@ -10,6 +10,29 @@ const FEATURES = [
   { icon: Music, label: 'Live Entertainment', desc: 'Weekly music, karaoke, live band sessions, and special event nights.' },
 ];
 
+const ABOUT_IMAGES = [
+  {
+    src: '/images/seatingdaytime.jpeg',
+    alt: 'Calenders daytime garden seating',
+    className: 'translate-y-8',
+  },
+  {
+    src: '/images/entrance.jpeg',
+    alt: 'Calenders venue entrance',
+    className: '',
+  },
+  {
+    src: '/images/events/calenders-wedding-event.png',
+    alt: 'Wedding event setup at Calenders',
+    className: 'translate-y-8',
+  },
+  {
+    src: '/images/events/calenders-movie-in-the-park-01.png',
+    alt: 'Movie in the park setup at Calenders',
+    className: '',
+  },
+];
+
 export default function About() {
   return (
     <section id="about" className="py-12 md:py-24 bg-brand-cream relative overflow-hidden">
@@ -18,33 +41,23 @@ export default function About() {
           {/* Image collage */}
           <div className="relative">
             <div className="grid grid-cols-2 gap-4">
-              <motion.div
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                className="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl translate-y-8"
-              >
-                <img
-                  src="/images/seatingdaytime.jpeg"
-                  alt="Calenders daytime garden seating"
-                  className="w-full h-full object-cover"
-                  referrerPolicy="no-referrer"
-                />
-              </motion.div>
-              <motion.div
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.2 }}
-                className="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl"
-              >
-                <img
-                  src="/images/entrance.jpeg"
-                  alt="Calenders venue entrance"
-                  className="w-full h-full object-cover"
-                  referrerPolicy="no-referrer"
-                />
-              </motion.div>
+              {ABOUT_IMAGES.map((image, index) => (
+                <motion.div
+                  key={image.src}
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.12 }}
+                  className={`aspect-[4/5] overflow-hidden rounded-3xl shadow-2xl ${image.className}`}
+                >
+                  <img
+                    src={image.src}
+                    alt={image.alt}
+                    className="h-full w-full object-cover"
+                    referrerPolicy="no-referrer"
+                  />
+                </motion.div>
+              ))}
             </div>
             <div className="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-brand-green/10 rounded-full blur-3xl" />
           </div>
@@ -78,8 +91,8 @@ export default function About() {
                   transition={{ delay: index * 0.08 }}
                   className="flex items-start gap-3 p-4 rounded-2xl bg-white border border-brand-green/5 shadow-sm"
                 >
-                  <div className="w-10 h-10 rounded-xl bg-brand-green/10 text-brand-green flex items-center justify-center shrink-0">
-                    <item.icon size={20} />
+                  <div className="shrink-0 pt-0.5 text-brand-green">
+                    <item.icon size={26} strokeWidth={1.8} />
                   </div>
                   <div>
                     <h4 className="font-bold text-brand-brown text-sm">{item.label}</h4>

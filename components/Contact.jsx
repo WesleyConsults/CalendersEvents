@@ -27,8 +27,8 @@ export default function Contact() {
               <div className="space-y-8">
                 {CONTACT_DETAILS.map(({ icon: Icon, label, value }) => (
                   <div key={label} className="flex gap-4">
-                    <div className="w-12 h-12 rounded-2xl bg-white text-brand-green flex items-center justify-center shadow-sm shrink-0">
-                      <Icon size={24} />
+                    <div className="shrink-0 pt-0.5 text-brand-green">
+                      <Icon size={28} strokeWidth={1.8} />
                     </div>
                     <div>
                       <h4 className="font-bold text-brand-brown text-lg">{label}</h4>

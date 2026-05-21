@@ -29,13 +29,13 @@ export default function WeeklyLineup() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="bg-white rounded-[2rem] p-7 border border-slate-100 shadow-sm"
+              className="rounded-[2rem] border border-[#E7D6C4] bg-[#FFF4E6] p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
             >
               <div className="flex items-center justify-between gap-4">
                 <span className="eyebrow">
                   {item.day}
                 </span>
-                <span className="inline-flex items-center gap-1.5 rounded-full bg-brand-cream px-3 py-1 text-sm font-semibold text-brand-brown">
+                <span className="inline-flex items-center gap-1.5 rounded-full bg-white/75 px-3 py-1 text-sm font-semibold text-brand-brown">
                   <Clock size={14} /> {item.time}
                 </span>
               </div>

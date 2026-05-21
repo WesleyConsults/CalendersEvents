@@ -25,20 +25,17 @@ import {
 const EVENT_CONFIG = {
   Karaoke: {
     icon: Mic2,
-    color: 'bg-amber-500',
-    bg: 'from-amber-50 to-orange-50',
+    iconColor: 'text-brand-green',
     badge: 'bg-amber-100 text-amber-700',
   },
   'Live Band': {
     icon: Music,
-    color: 'bg-brand-green',
-    bg: 'from-yellow-50 to-amber-50',
+    iconColor: 'text-brand-green',
     badge: 'bg-yellow-100 text-yellow-700',
   },
   Movie: {
     icon: Film,
-    color: 'bg-cyan-600',
-    bg: 'from-cyan-50 to-sky-50',
+    iconColor: 'text-brand-green',
     badge: 'bg-cyan-100 text-cyan-700',
   },
 };
@@ -84,7 +81,7 @@ export default function Events({ detailed = false }) {
           <SectionHeading title="Join the Celebration" subtitle="Upcoming Events" centered />
         )}
 
-        <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4 lg:gap-8">
           {UPCOMING_EVENTS.map((event, index) => {
             const config = EVENT_CONFIG[event.type] ?? EVENT_CONFIG.Karaoke;
             const Icon = config.icon;
@@ -96,10 +93,10 @@ export default function Events({ detailed = false }) {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.12 }}
-                className={`group relative bg-gradient-to-br ${config.bg} rounded-3xl overflow-hidden border border-slate-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col`}
+                className="group relative overflow-hidden rounded-3xl border border-brand-cream/10 bg-brand-brown-light text-brand-cream shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-brand-brown-light/20 flex flex-col"
               >
                 {/* Event image */}
-                <div className="h-48 w-full overflow-hidden">
+                <div className="h-60 w-full overflow-hidden md:h-64">
                   <img
                     src={event.image}
                     alt={event.title}
@@ -107,11 +104,11 @@ export default function Events({ detailed = false }) {
                   />
                 </div>
 
-                <div className="p-8 flex-1 flex flex-col">
+                <div className="flex flex-1 flex-col p-6">
                   {/* Icon + badge row */}
-                  <div className="flex justify-between items-start mb-6">
-                    <div className={`w-12 h-12 rounded-2xl ${config.color} text-white flex items-center justify-center shadow-md`}>
-                      <Icon size={22} />
+                  <div className="mb-4 flex items-start justify-between">
+                    <div className={`shrink-0 ${config.iconColor}`}>
+                      <Icon size={30} strokeWidth={1.8} />
                     </div>
                     <span className={`text-[11px] font-bold px-3 py-1 rounded-full uppercase tracking-[0.08em] ${config.badge}`}>
                       {event.type}
@@ -119,25 +116,25 @@ export default function Events({ detailed = false }) {
                   </div>
 
                   {/* Title */}
-                  <h3 className="card-title text-xl text-brand-brown mb-2">
+                  <h3 className="card-title text-xl text-white mb-2">
                     {event.title}
                   </h3>
 
                   {/* Date */}
-                  <div className="flex items-center gap-1.5 text-slate-500 text-sm mb-4 font-medium">
+                  <div className="mb-3 flex items-center gap-1.5 text-sm font-medium text-brand-cream/70">
                     <Calendar size={14} className="shrink-0 text-brand-green" />
                     {event.date}
                   </div>
 
                   {/* Description */}
-                  <p className="text-slate-600 text-sm leading-relaxed flex-1 line-clamp-3">
+                  <p className="line-clamp-2 flex-1 text-sm leading-relaxed text-brand-cream/70">
                     {event.description}
                   </p>
 
                   {/* CTA */}
                   <Link
                     href="/contact#book-event"
-                    className="button-text mt-6 w-full bg-white hover:bg-brand-brown hover:text-white border border-slate-200 text-brand-brown py-3 rounded-xl text-sm transition-all flex items-center justify-center gap-2 group-hover:border-brand-brown"
+                    className="button-text mt-5 flex w-full items-center justify-center gap-2 rounded-xl border border-brand-cream/15 bg-brand-cream py-2.5 text-sm text-brand-brown transition-all hover:bg-white"
                   >
                     Reserve a Spot <ArrowRight size={15} />
                   </Link>
@@ -195,8 +192,8 @@ export default function Events({ detailed = false }) {
                       transition={{ delay: index * 0.08 }}
                       className="rounded-[2rem] border border-white/10 bg-white/10 p-6 backdrop-blur-sm"
                     >
-                      <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-green text-white">
-                        <Icon size={22} />
+                      <div className="text-brand-green">
+                        <Icon size={30} strokeWidth={1.8} />
                       </div>
                       <h3 className="card-title mt-6 text-xl">{event.title}</h3>
                       <p className="mt-3 text-sm text-brand-cream/70 leading-relaxed">{event.description}</p>

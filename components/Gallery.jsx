@@ -7,20 +7,19 @@ import SectionHeading from '@/components/SectionHeading';
 import { GALLERY_IMAGES } from '@/lib/data';
 
 /**
- * Mobile uses a 6-column magazine grid: one large feature image,
- * two smaller companion tiles, then mixed medium/wide moments.
+ * Repeats a magazine grid rhythm across mobile, tablet, and desktop.
  */
 function getGridClass(index) {
-  const mobileLayout = [
-    'col-span-4 row-span-3 md:col-span-2 md:row-span-2',
-    'col-span-2 row-span-2 md:col-span-1 md:row-span-1',
-    'col-span-2 row-span-1 md:col-span-1 md:row-span-1',
-    'col-span-3 row-span-2 md:col-span-1 md:row-span-2',
-    'col-span-3 row-span-2 md:col-span-1 md:row-span-1',
-    'col-span-6 row-span-2 md:col-span-2 md:row-span-1',
+  const layout = [
+    'col-span-4 row-span-3 md:col-span-2 md:row-span-2 lg:col-span-2 lg:row-span-2',
+    'col-span-2 row-span-2 md:col-span-1 md:row-span-1 lg:col-span-1 lg:row-span-1',
+    'col-span-2 row-span-1 md:col-span-1 md:row-span-1 lg:col-span-1 lg:row-span-1',
+    'col-span-3 row-span-2 md:col-span-1 md:row-span-2 lg:col-span-1 lg:row-span-2',
+    'col-span-3 row-span-2 md:col-span-1 md:row-span-1 lg:col-span-1 lg:row-span-1',
+    'col-span-6 row-span-2 md:col-span-2 md:row-span-1 lg:col-span-2 lg:row-span-1',
   ];
 
-  return mobileLayout[index] ?? 'col-span-3 row-span-2 md:col-span-1 md:row-span-1';
+  return layout[index % layout.length];
 }
 
 export default function Gallery() {
