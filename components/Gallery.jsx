@@ -6,6 +6,8 @@ import { Instagram, X } from 'lucide-react';
 import SectionHeading from '@/components/SectionHeading';
 import { GALLERY_IMAGES } from '@/lib/data';
 
+const INSTAGRAM_URL = 'https://www.instagram.com/calendersevents?igsh=ZGJxNXY4djkyZDdm';
+
 /**
  * Repeats a magazine grid rhythm across mobile, tablet, and desktop.
  */
@@ -73,7 +75,7 @@ export default function Gallery() {
         {/* Instagram CTA */}
         <div className="mt-10 text-center">
           <a
-            href="https://instagram.com"
+            href={INSTAGRAM_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-brand-green font-semibold hover:text-brand-green-dark transition-colors text-sm underline underline-offset-4"

@@ -15,7 +15,7 @@ import {
 } from '@/lib/data';
 
 const menuPosterImage = '/images/menu/calenders-menu-poster.png';
-const whatsAppLink = 'https://wa.me/233502584606';
+const whatsAppLink = 'https://wa.me/233557590224';
 
 export default function MenuPreview({ detailed = false }) {
   const [activeCategory, setActiveCategory] = useState('All');

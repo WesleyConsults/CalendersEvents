@@ -27,8 +27,8 @@ const ABOUT_IMAGES = [
     className: 'translate-y-8',
   },
   {
-    src: '/images/events/calenders-movie-in-the-park-01.webp',
-    alt: 'Movie in the park setup at Calenders',
+    src: '/images/events/calenders-movie-in-the-park-02.webp',
+    alt: 'Movie in the park guests at Calenders',
     className: '',
   },
 ];

@@ -9,10 +9,14 @@ const CONTACT_DETAILS = [
     value: 'Revert Lane, Harbour Area (Near Vienna Beach), Takoradi, Ghana',
   },
   { icon: Phone, label: 'Phone Number', value: '+233 50 258 4606 / 055 759 0224' },
-  { icon: Mail, label: 'Email Address', value: 'hello@calendersevents.com' },
+  { icon: Mail, label: 'Email Address', value: 'calenderseventsgh@gmail.com' },
 ];
 
-const SOCIAL_ICONS = [Instagram, Facebook, Twitter];
+const SOCIAL_LINKS = [
+  { icon: Instagram, href: 'https://www.instagram.com/calendersevents?igsh=ZGJxNXY4djkyZDdm', label: 'Instagram' },
+  { icon: Facebook, href: null, label: 'Facebook' },
+  { icon: Twitter, href: null, label: 'Twitter' },
+];
 
 export default function Contact() {
   return (
@@ -39,15 +43,17 @@ export default function Contact() {
               </div>
 
               <div className="mt-12 flex gap-4">
-                {SOCIAL_ICONS.map((Icon, i) => (
-                  <button
-                    key={i}
-                    type="button"
-                    aria-label={`Social link ${i + 1}`}
+                {SOCIAL_LINKS.filter(({ href }) => href).map(({ icon: Icon, href, label }) => (
+                  <a
+                    key={label}
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={label}
                     className="w-12 h-12 rounded-full bg-brand-brown text-brand-cream flex items-center justify-center hover:bg-brand-green transition-all hover:-translate-y-1"
                   >
                     <Icon size={20} />
-                  </button>
+                  </a>
                 ))}
               </div>
             </div>

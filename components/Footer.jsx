@@ -10,10 +10,11 @@ const QUICK_LINKS = [
   { name: 'Bookings', href: '/contact#book-event' },
 ];
 const EVENT_LINKS = ['Weddings', 'Birthdays', 'Corporate', 'Live Gigs', 'Film Night'];
+const INSTAGRAM_URL = 'https://www.instagram.com/calendersevents?igsh=ZGJxNXY4djkyZDdm';
 const SOCIAL_LINKS = [
-  { name: 'WhatsApp', href: 'https://wa.me/233502584606', icon: MessageCircle },
+  { name: 'WhatsApp', href: 'https://wa.me/233557590224', icon: MessageCircle },
   { name: 'Facebook', href: '#', icon: Facebook },
-  { name: 'Instagram', href: '#', icon: Instagram },
+  { name: 'Instagram', href: INSTAGRAM_URL, icon: Instagram },
   { name: 'TikTok', href: '#', icon: Music2 },
 ];
 
@@ -53,6 +54,8 @@ export default function Footer() {
                   <a
                     key={name}
                     href={href}
+                    target={href.startsWith('http') ? '_blank' : undefined}
+                    rel={href.startsWith('http') ? 'noopener noreferrer' : undefined}
                     aria-label={name}
                     className="flex h-11 w-11 items-center justify-center rounded-full border border-brand-cream/10 bg-brand-cream/10 text-brand-cream transition-colors hover:border-brand-green hover:bg-brand-green"
                   >
