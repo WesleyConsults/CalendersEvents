@@ -18,24 +18,37 @@ const INITIAL_FORM = {
   eventType: 'Dining Reservation',
 };
 
+const BOOKING_EMAIL = 'calenderseventsgh@gmail.com';
+
 export default function BookingForm({ sectionId = 'booking' }) {
   const [form, setForm] = useState(INITIAL_FORM);
   const [submitted, setSubmitted] = useState(false);
-  const [loading, setLoading] = useState(false);
 
   const handleChange = (e) =>
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setLoading(true);
-    // Simulate a brief processing delay for UX
-    setTimeout(() => {
-      setLoading(false);
-      setSubmitted(true);
-      setForm(INITIAL_FORM);
-    }, 800);
-    // Auto-reset the success state after 6 seconds
+
+    const subject = `Booking Request - ${form.eventType}`;
+    const body = [
+      'Hello Calenders Events,',
+      '',
+      'I would like to make a booking.',
+      '',
+      `Full Name: ${form.name}`,
+      `Date: ${form.date}`,
+      `Number of Guests: ${form.guests}`,
+      `Event Type: ${form.eventType}`,
+      '',
+      'Please contact me to confirm availability and next steps.',
+      '',
+      'Thank you.',
+    ].join('\n');
+
+    window.location.href = `mailto:${BOOKING_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    setSubmitted(true);
+    setForm(INITIAL_FORM);
     setTimeout(() => setSubmitted(false), 7000);
   };
 
@@ -62,7 +75,7 @@ export default function BookingForm({ sectionId = 'booking' }) {
           <div className="md:w-[55%] p-8 md:p-12">
             <h3 className="card-title text-2xl text-brand-brown mb-1">Book Your Experience</h3>
             <p className="text-slate-500 text-sm mb-8">
-              Fill out the form and we&apos;ll confirm your booking within 24 hours.
+              Fill out the form and we&apos;ll prepare an email request you can send from your mail app.
             </p>
 
             {submitted ? (
@@ -71,10 +84,10 @@ export default function BookingForm({ sectionId = 'booking' }) {
                 <div className="w-20 h-20 rounded-full bg-brand-green/10 flex items-center justify-center">
                   <CheckCircle2 size={48} className="text-brand-green" />
                 </div>
-                <h4 className="font-sans text-2xl font-bold text-brand-brown">Booking request sent!</h4>
+                <h4 className="font-sans text-2xl font-bold text-brand-brown">Email request prepared!</h4>
                 <p className="text-slate-500 text-sm max-w-xs leading-relaxed">
-                  We&apos;ll reach out shortly to confirm the details. Can&apos;t wait to host you at
-                  Calenders Events!
+                  Your email app should open with the booking details filled in. Please press send there
+                  to complete your request.
                 </p>
                 <button
                   onClick={() => setSubmitted(false)}
@@ -173,17 +186,9 @@ export default function BookingForm({ sectionId = 'booking' }) {
                 {/* Submit */}
                 <button
                   type="submit"
-                  disabled={loading}
                   className="button-text w-full bg-brand-green text-white py-4 rounded-xl shadow-lg shadow-brand-green/25 hover:bg-brand-green-dark disabled:opacity-70 disabled:cursor-not-allowed transition-all flex items-center justify-center gap-2"
                 >
-                  {loading ? (
-                    <>
-                      <span className="w-4 h-4 border-2 border-white/40 border-t-white rounded-full animate-spin" />
-                      Sending…
-                    </>
-                  ) : (
-                    'Confirm Booking'
-                  )}
+                  Confirm Booking
                 </button>
               </form>
             )}
