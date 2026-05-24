@@ -447,7 +447,7 @@ No environment variables are required at the moment.
 - The booking form does not submit anywhere yet.
 - Newsletter input in the footer is presentational only.
 - Footer event links are placeholders using `href="#"`.
-- Social icon buttons in `Contact.jsx` do not link to real social profiles yet.
+- Social icon buttons in Contact.jsx do not link to real social profiles yet (except Instagram and Facebook).
 - The color token `brand-green` is actually orange.
 - There is no automated test suite.
 - There is no lint command configured for the current Next.js version beyond the package script.
@@ -465,7 +465,7 @@ Highest value:
 Good follow-up polish:
 
 - Add testimonials or Google review highlights.
-- Add social links for Instagram, Facebook, and TikTok.
+- Add social link for TikTok.
 - Add downloadable menu PDF.
 - Add Open Graph images and better page metadata.
 - Add gallery route if the venue wants a standalone gallery page.

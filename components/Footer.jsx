@@ -1,4 +1,4 @@
-import { Clock, Facebook, Instagram, MessageCircle, Music2 } from 'lucide-react';
+import { Clock, Facebook, Instagram, MessageCircle } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -11,11 +11,11 @@ const QUICK_LINKS = [
 ];
 const EVENT_LINKS = ['Weddings', 'Birthdays', 'Corporate', 'Live Gigs', 'Film Night'];
 const INSTAGRAM_URL = 'https://www.instagram.com/calendersevents?igsh=ZGJxNXY4djkyZDdm';
+const FACEBOOK_URL = 'https://www.facebook.com/CalendersEvents?mibextid=wwXIfr&mibextid=wwXIfr';
 const SOCIAL_LINKS = [
   { name: 'WhatsApp', href: 'https://wa.me/233557590224', icon: MessageCircle },
-  { name: 'Facebook', href: '#', icon: Facebook },
+  { name: 'Facebook', href: FACEBOOK_URL, icon: Facebook },
   { name: 'Instagram', href: INSTAGRAM_URL, icon: Instagram },
-  { name: 'TikTok', href: '#', icon: Music2 },
 ];
 
 export default function Footer() {
@@ -96,12 +96,8 @@ export default function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="pt-5 md:pt-8 border-t border-brand-cream/10 flex flex-col md:flex-row justify-between items-center gap-3 md:gap-4 text-center text-xs md:text-sm text-brand-cream/50">
+        <div className="pt-5 md:pt-8 border-t border-brand-cream/10 text-center text-xs md:text-sm text-brand-cream/50">
           <p>&copy; 2026 Calenders Events. All rights reserved.</p>
-          <div className="flex flex-wrap justify-center gap-5 md:gap-8">
-            <a href="#" className="hover:text-brand-green transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-brand-green transition-colors">Terms of Service</a>
-          </div>
         </div>
       </div>
     </footer>

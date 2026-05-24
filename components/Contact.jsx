@@ -14,7 +14,7 @@ const CONTACT_DETAILS = [
 
 const SOCIAL_LINKS = [
   { icon: Instagram, href: 'https://www.instagram.com/calendersevents?igsh=ZGJxNXY4djkyZDdm', label: 'Instagram' },
-  { icon: Facebook, href: null, label: 'Facebook' },
+  { icon: Facebook, href: 'https://www.facebook.com/CalendersEvents?mibextid=wwXIfr&mibextid=wwXIfr', label: 'Facebook' },
   { icon: Twitter, href: null, label: 'Twitter' },
 ];
 
