@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'motion/react';
+import Image from 'next/image';
 import {
   ArrowRight,
   Briefcase,
@@ -49,7 +50,22 @@ export default function Events({ detailed = false }) {
         {detailed ? (
           <div className="mb-12 md:mb-16 grid lg:grid-cols-[1.1fr_0.9fr] gap-10 items-center">
             <div>
-              <SectionHeading title="Events at Calenders" subtitle="Live Nights & Private Celebrations" />
+              <SectionHeading
+                title={
+                  <span className="block">
+                    Events at
+                    <br />
+                    <Image
+                      src="/calenders-wordmark.png"
+                      alt="Calenders"
+                      width={200}
+                      height={44}
+                      className="inline-block h-11 md:h-[4.4rem] lg:h-[5rem] w-auto mt-1"
+                    />
+                  </span>
+                }
+                subtitle="Live Nights & Private Celebrations"
+              />
               <p className="text-lg text-slate-600 leading-relaxed max-w-2xl">
                 From weekly entertainment nights to fully hosted private celebrations, Calenders brings
                 food, drinks, music, and garden-style atmosphere together in one venue.

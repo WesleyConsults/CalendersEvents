@@ -75,7 +75,7 @@ export default function About() {
                     alt="Calenders"
                     width={200}
                     height={44}
-                    className="inline-block h-10 md:h-16 lg:h-[4.5rem] w-auto mt-1"
+                    className="inline-block h-11 md:h-[4.4rem] lg:h-[5rem] w-auto mt-1"
                   />
                 </span>
               }
