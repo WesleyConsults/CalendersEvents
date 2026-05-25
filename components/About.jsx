@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'motion/react';
+import Image from 'next/image';
 import { Leaf, Wine, Music } from 'lucide-react';
 import SectionHeading from '@/components/SectionHeading';
 
@@ -64,7 +65,21 @@ export default function About() {
 
           {/* Text content */}
           <div>
-            <SectionHeading title="Welcome to Calenders" />
+            <SectionHeading
+              title={
+                <span className="block">
+                  Welcome to
+                  <br />
+                  <Image
+                    src="/calenders-wordmark.png"
+                    alt="Calenders"
+                    width={200}
+                    height={44}
+                    className="inline-block h-10 md:h-16 lg:h-[4.5rem] w-auto mt-1"
+                  />
+                </span>
+              }
+            />
             <p className="text-slate-600 text-lg mb-6 leading-relaxed">
               Calenders Events Bar &amp; Lounge is one of Takoradi&apos;s warmest destinations for dining, drinks, entertainment, and private celebrations. Established in 2019, Calenders was created to help individuals, families, groups, and businesses plan memorable social events within the Sekondi-Takoradi metropolis.
             </p>

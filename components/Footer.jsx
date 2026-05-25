@@ -9,7 +9,6 @@ const QUICK_LINKS = [
   { name: 'Restaurant', href: '/restaurant' },
   { name: 'Bookings', href: '/contact#book-event' },
 ];
-const EVENT_LINKS = ['Weddings', 'Birthdays', 'Corporate', 'Live Gigs', 'Film Night'];
 const INSTAGRAM_URL = 'https://www.instagram.com/calendersevents?igsh=ZGJxNXY4djkyZDdm';
 const FACEBOOK_URL = 'https://www.facebook.com/CalendersEvents?mibextid=wwXIfr&mibextid=wwXIfr';
 const SOCIAL_LINKS = [
@@ -22,7 +21,7 @@ export default function Footer() {
   return (
     <footer className="bg-brand-brown-light py-10 md:py-20 text-brand-cream">
       <div className="container mx-auto px-5 md:px-6">
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-8 md:gap-12 mb-8 md:mb-16">
+        <div className="grid grid-cols-2 gap-x-8 gap-y-8 md:gap-12 mb-8 md:mb-16">
           {/* Brand */}
           <div className="col-span-2 md:col-span-1">
             <Link href="/" className="flex items-center gap-2 mb-4 md:mb-6">
@@ -80,19 +79,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Event types */}
-          <div>
-            <h5 className="font-sans font-bold text-base md:text-lg mb-3 md:mb-6">Events</h5>
-            <ul className="space-y-2.5 md:space-y-4 text-sm md:text-base text-brand-cream/70">
-              {EVENT_LINKS.map((link) => (
-                <li key={link}>
-                  <a href="#" className="hover:text-brand-green transition-colors">
-                    {link}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
         </div>
 
         {/* Bottom bar */}
