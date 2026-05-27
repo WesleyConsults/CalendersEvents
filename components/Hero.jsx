@@ -1,21 +1,42 @@
 'use client';
 
+import { useEffect, useState } from 'react';
 import { motion } from 'motion/react';
 import { ChevronRight } from 'lucide-react';
 import Link from 'next/link';
+import { HOME_GALLERY_IMAGES } from '@/lib/homeGalleryImages';
+
+const SLIDE_INTERVAL_MS = 7000;
 
 export default function Hero() {
+  const [activeImageIndex, setActiveImageIndex] = useState(0);
+
+  useEffect(() => {
+    const intervalId = window.setInterval(() => {
+      setActiveImageIndex((currentIndex) => (currentIndex + 1) % HOME_GALLERY_IMAGES.length);
+    }, SLIDE_INTERVAL_MS);
+
+    return () => window.clearInterval(intervalId);
+  }, []);
+
   return (
     <section className="relative min-h-[88svh] md:min-h-screen flex items-start md:items-center overflow-hidden">
       {/* ... (background code) */}
       <div className="absolute inset-0 z-0">
-        <img
-          src="/images/seatingnighttime.jpeg"
-          alt="Calenders Events Bar & Lounge - Nighttime Seating"
-          className="w-full h-full object-cover"
-          fetchPriority="high"
-          referrerPolicy="no-referrer"
-        />
+        {HOME_GALLERY_IMAGES.map(({ src, alt }, index) => (
+          <motion.img
+            key={src}
+            src={src}
+            alt={alt}
+            initial={false}
+            animate={{ opacity: index === activeImageIndex ? 1 : 0 }}
+            transition={{ duration: 1, ease: 'easeInOut' }}
+            style={{ opacity: index === 0 ? 1 : 0 }}
+            className="absolute inset-0 h-full w-full object-cover"
+            fetchPriority={index === 0 ? 'high' : 'auto'}
+            referrerPolicy="no-referrer"
+          />
+        ))}
         <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/40 to-brand-green/30" />
       </div>
 

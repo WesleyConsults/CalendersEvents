@@ -297,6 +297,46 @@ export default function MenuPreview({ detailed = false }) {
               <p className="text-center text-sm font-medium text-slate-500">Prices may be subject to change.</p>
             </div>
 
+            <motion.article
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="grid overflow-hidden rounded-[2rem] border border-[#E7D6C4] bg-[#FFFDF8] shadow-sm lg:grid-cols-[0.95fr_1.05fr]"
+            >
+              <div className="relative min-h-[260px] overflow-hidden lg:min-h-full">
+                <img
+                  src="/images/local-dish-time.png"
+                  alt="Ghanaian local dishes with flag and meals"
+                  className="absolute inset-0 h-full w-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-black/5 to-transparent lg:bg-gradient-to-r" />
+              </div>
+
+              <div className="p-6 md:p-8 lg:p-10">
+                <div className="inline-flex items-center gap-2 rounded-full bg-brand-green/10 px-3 py-1.5 text-sm font-bold text-brand-green">
+                  <UtensilsCrossed size={16} />
+                  Local Dish Time
+                </div>
+                <h2 className="mt-5 font-menu-display text-3xl uppercase tracking-[0.06em] text-[#6F173F] md:text-4xl">
+                  Local dishes before the live band
+                </h2>
+                <p className="mt-4 max-w-2xl text-slate-700 leading-relaxed md:text-lg">
+                  Local dishes are available from <strong>11:00 AM to 9:00 PM</strong>, giving guests
+                  time to enjoy a proper meal before the live band starts.
+                </p>
+                <div className="mt-6 grid gap-3 sm:grid-cols-2">
+                  <div className="rounded-2xl bg-[#FFF8EC] px-4 py-3">
+                    <p className="text-xs font-bold uppercase tracking-[0.16em] text-slate-500">Serving Time</p>
+                    <p className="mt-1 font-menu-text text-xl font-bold text-brand-brown">11:00 AM - 9:00 PM</p>
+                  </div>
+                  <div className="rounded-2xl bg-[#FFF8EC] px-4 py-3">
+                    <p className="text-xs font-bold uppercase tracking-[0.16em] text-slate-500">Best For</p>
+                    <p className="mt-1 font-menu-text text-xl font-bold text-brand-brown">Lunch, dinner, and pre-show meals</p>
+                  </div>
+                </div>
+              </div>
+            </motion.article>
+
             <div className="rounded-[1.5rem] border border-[#E7D6C4] bg-white px-5 py-6 shadow-sm md:px-8">
               <div className="flex flex-col gap-5 md:flex-row md:items-center md:justify-between">
                 <p className="max-w-xl text-slate-600">

@@ -1,10 +1,55 @@
 'use client';
 
 import { motion } from 'motion/react';
-import { Clock } from 'lucide-react';
+import { ArrowRight, Music2 } from 'lucide-react';
+import Link from 'next/link';
 import { WEEKLY_LINEUP } from '@/lib/data';
 
-export default function WeeklyLineup() {
+const WEEKLY_LINEUP_FLYER = '/images/weekly-lineup.jpg';
+
+export default function WeeklyLineup({ variant = 'detailed' }) {
+  const isPreview = variant === 'preview';
+
+  if (isPreview) {
+    return (
+      <section id="weekly-lineup" className="bg-brand-cream py-12 md:py-20">
+        <div className="container mx-auto px-6">
+          <div className="grid gap-10 lg:grid-cols-[0.82fr_1.18fr] lg:items-center">
+            <div>
+              <p className="eyebrow mb-2">
+                Weekly Lineup
+              </p>
+              <h2 className="section-title text-brand-brown">See What&apos;s On This Week</h2>
+              <p className="mt-5 max-w-xl text-slate-600 leading-relaxed">
+                Calenders has an official rhythm for every night, from jazz and blues to karaoke,
+                comedy, live band sessions, and Sunday specials.
+              </p>
+              <Link
+                href="/events"
+                className="button-text mt-7 inline-flex items-center gap-2 rounded-xl bg-brand-green px-6 py-3 text-white transition-colors hover:bg-brand-green-dark"
+              >
+                View Event Details <ArrowRight size={16} />
+              </Link>
+            </div>
+
+            <motion.figure
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="overflow-hidden rounded-[2rem] border border-brand-brown/10 bg-white shadow-2xl shadow-brand-brown/10"
+            >
+              <img
+                src={WEEKLY_LINEUP_FLYER}
+                alt="Official Calenders weekly lineup flyer"
+                className="h-auto w-full"
+              />
+            </motion.figure>
+          </div>
+        </div>
+      </section>
+    );
+  }
+
   return (
     <section id="weekly-lineup" className="bg-brand-cream py-12 md:py-24">
       <div className="container mx-auto px-6">
@@ -13,15 +58,15 @@ export default function WeeklyLineup() {
             <p className="eyebrow mb-2">
               Weekly Lineup
             </p>
-            <h2 className="section-title text-brand-brown">Your Week at Calenders</h2>
+            <h2 className="section-title text-brand-brown">Every Night Has a Vibe</h2>
           </div>
           <p className="max-w-xl text-slate-600 leading-relaxed">
-            A simple rhythm guests can remember: live music during the week, karaoke on Saturday,
-            and a warm Sunday close with food and band sessions.
+            The official Calenders weekly lineup brings music, comedy, karaoke, food specials,
+            and live band sessions together across the whole week.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {WEEKLY_LINEUP.map((item, index) => (
             <motion.article
               key={item.day}
@@ -29,22 +74,23 @@ export default function WeeklyLineup() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="rounded-[2rem] border border-[#E7D6C4] bg-[#FFF4E6] p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+              className={`rounded-lg border px-3 py-2.5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg md:rounded-2xl md:p-6 ${item.colorClass}`}
             >
               <div className="flex items-center justify-between gap-4">
-                <span className="eyebrow">
+                <span className="text-[10px] font-extrabold uppercase tracking-[0.16em] md:text-xs md:tracking-[0.18em]">
                   {item.day}
                 </span>
-                <span className="inline-flex items-center gap-1.5 rounded-full bg-white/75 px-3 py-1 text-sm font-semibold text-brand-brown">
-                  <Clock size={14} /> {item.time}
+                <span className={`inline-flex h-7 w-7 items-center justify-center rounded-full md:h-8 md:w-8 ${item.iconClass}`}>
+                  <Music2 size={14} className="md:h-4 md:w-4" />
                 </span>
               </div>
-              <h3 className="card-title mt-8 text-2xl text-brand-brown">{item.title}</h3>
-              <p className="mt-2 font-semibold text-slate-700">{item.mood}</p>
-              <p className="mt-4 text-sm text-slate-600 leading-relaxed">{item.highlight}</p>
+              <h3 className="card-title mt-1.5 text-base md:mt-5 md:text-xl">{item.title}</h3>
+              <p className="mt-0.5 text-xs font-semibold opacity-90 md:mt-1 md:text-sm">{item.mood}</p>
+              <p className="mt-1.5 text-xs leading-snug opacity-80 md:mt-3 md:text-sm md:leading-relaxed">{item.highlight}</p>
             </motion.article>
           ))}
         </div>
+
       </div>
     </section>
   );

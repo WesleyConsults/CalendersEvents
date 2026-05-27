@@ -17,6 +17,7 @@ import {
 } from 'lucide-react';
 import Link from 'next/link';
 import SectionHeading from '@/components/SectionHeading';
+import WeeklyLineup from '@/components/WeeklyLineup';
 import {
   EVENT_GALLERY_IMAGES,
   PRIVATE_EVENT_TYPES,
@@ -46,9 +47,9 @@ const PRIVATE_EVENT_ICONS = [Heart, Gift, Briefcase, Camera];
 export default function Events({ detailed = false }) {
   return (
     <section id="events" className="bg-white">
-      <div className="container mx-auto px-6 py-12 md:py-24">
+      <div className={`container mx-auto px-6 ${detailed ? 'py-12 md:py-24' : 'pt-12 md:pt-24'}`}>
         {detailed ? (
-          <div className="mb-12 md:mb-16 grid lg:grid-cols-[1.1fr_0.9fr] gap-10 items-center">
+          <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-10 items-center">
             <div>
               <SectionHeading
                 title={
@@ -96,7 +97,11 @@ export default function Events({ detailed = false }) {
         ) : (
           <SectionHeading title="Join the Celebration" subtitle="Upcoming Events" centered />
         )}
+      </div>
 
+      {detailed && <WeeklyLineup />}
+
+      <div className="container mx-auto px-6 py-12 md:py-24">
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4 lg:gap-8">
           {UPCOMING_EVENTS.map((event, index) => {
             const config = EVENT_CONFIG[event.type] ?? EVENT_CONFIG.Karaoke;

@@ -1,12 +1,7 @@
 'use client';
 
 import { motion } from 'motion/react';
-
-const IMAGES = [
-  { src: '/images/bar.jpeg', alt: 'Calenders Bar' },
-  { src: '/images/lounge.jpeg', alt: 'Calenders Lounge' },
-  { src: '/images/entrance.jpeg', alt: 'Calenders Entrance' },
-];
+import { HOME_GALLERY_IMAGES } from '@/lib/homeGalleryImages';
 
 export default function GalleryStrip() {
   return (
@@ -17,7 +12,7 @@ export default function GalleryStrip() {
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          {IMAGES.map(({ src, alt }, index) => (
+          {HOME_GALLERY_IMAGES.map(({ src, alt }, index) => (
             <motion.div
               key={src}
               initial={{ opacity: 0, y: 24 }}
