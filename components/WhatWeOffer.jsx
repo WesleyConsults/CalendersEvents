@@ -2,23 +2,28 @@
 
 import { motion } from 'motion/react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const OFFERS = [
   {
     title: 'Events & Celebrations',
     image: '/images/offers/events-and-celebrations-card.png',
+    href: '/events',
   },
   {
     title: 'Restaurant & Bar',
     image: '/images/offers/restaurant-and-bar-card.png',
+    href: '/restaurant',
   },
   {
     title: 'Live Entertainment',
     image: '/images/offers/live-entertainment-card.png',
+    href: '/events',
   },
   {
     title: 'Garden Atmosphere',
     image: '/images/offers/garden-atmosphere-card.png',
+    href: '/about',
   },
 ];
 
@@ -35,24 +40,28 @@ export default function WhatWeOffer() {
         </div>
 
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          {OFFERS.map(({ title, image }, index) => (
+          {OFFERS.map(({ title, image, href }, index) => (
             <motion.article
               key={title}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.08 }}
-              className="group overflow-hidden rounded-[1.5rem] border border-[#E7D6C4] bg-[#FFF4E6] shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
             >
-              <div className="relative aspect-[4/3] overflow-hidden bg-brand-brown-light">
-                <Image
-                  src={image}
-                  alt={title}
-                  fill
-                  sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-              </div>
+              <Link
+                href={href}
+                className="group block overflow-hidden rounded-[1.5rem] border border-[#E7D6C4] bg-[#FFF4E6] shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+              >
+                <div className="relative aspect-[4/3] overflow-hidden bg-brand-brown-light">
+                  <Image
+                    src={image}
+                    alt={title}
+                    fill
+                    sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                </div>
+              </Link>
             </motion.article>
           ))}
         </div>
