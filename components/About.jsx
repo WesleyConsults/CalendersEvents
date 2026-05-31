@@ -2,7 +2,7 @@
 
 import { motion } from 'motion/react';
 import Image from 'next/image';
-import { Leaf, Wine, Music } from 'lucide-react';
+import { Leaf, Wine, Music, User } from 'lucide-react';
 import SectionHeading from '@/components/SectionHeading';
 
 const FEATURES = [
@@ -118,6 +118,47 @@ export default function About() {
             </div>
           </div>
         </div>
+
+        {/* Message from the CEO */}
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.15 }}
+          className="mt-20 md:mt-28 overflow-hidden rounded-[2rem] border border-[#E7D6C4] bg-white shadow-lg"
+        >
+          <div className="grid md:grid-cols-[1fr_2fr]">
+            <div className="relative flex items-center justify-center bg-brand-green/5 px-8 py-10 md:py-12">
+              <div className="flex h-32 w-32 items-center justify-center rounded-full bg-brand-green/10 text-brand-green md:h-40 md:w-40">
+                <User size={80} strokeWidth={1.2} />
+              </div>
+              <div className="absolute bottom-6 left-1/2 -translate-x-1/2 hidden md:block">
+                <span className="inline-block rounded-full bg-brand-green/10 px-4 py-1 text-xs font-bold uppercase tracking-[0.08em] text-brand-green">
+                  CEO & Founder
+                </span>
+              </div>
+            </div>
+
+            <div className="p-8 md:p-12 lg:p-14">
+              <span className="inline-flex items-center gap-2 rounded-full bg-brand-green/10 px-3 py-1.5 text-xs font-bold uppercase tracking-[0.08em] text-brand-green md:hidden mb-4">
+                CEO & Founder
+              </span>
+              <p className="eyebrow mb-2">Message from the CEO</p>
+              <blockquote className="mt-4 text-lg text-slate-700 leading-relaxed md:text-xl lg:text-2xl">
+                &ldquo;Calenders was built on a simple belief — that every special moment deserves a
+                beautiful setting. From the very beginning, our mission has been to create a space
+                where the people of Takoradi and beyond can come together to celebrate, dine, and
+                make lasting memories. Every event we host, every meal we serve, and every guest
+                that walks through our doors is a part of that story. We are not just a venue —
+                we are a community, and we are honoured to be part of your celebrations.&rdquo;
+              </blockquote>
+              <div className="mt-6 border-l-4 border-brand-green pl-4">
+                <p className="font-bold text-brand-brown text-lg">Mr. Akwesi Bawuah</p>
+                <p className="text-sm text-slate-500">Chief Executive Officer, Calenders Events</p>
+              </div>
+            </div>
+          </div>
+        </motion.div>
       </div>
     </section>
   );
