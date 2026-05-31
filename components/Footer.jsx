@@ -1,4 +1,4 @@
-import { Clock, Facebook, Instagram, MessageCircle } from 'lucide-react';
+import { Clock, Facebook, Instagram, Linkedin, MessageCircle } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -11,10 +11,23 @@ const QUICK_LINKS = [
 ];
 const INSTAGRAM_URL = 'https://www.instagram.com/calendersevents?igsh=ZGJxNXY4djkyZDdm';
 const FACEBOOK_URL = 'https://www.facebook.com/CalendersEvents?mibextid=wwXIfr&mibextid=wwXIfr';
+const TIKTOK_URL = 'https://www.tiktok.com/@calendersevents';
+const LINKEDIN_URL = 'https://www.linkedin.com/in/calenders-events-785594317?utm_source=share_via&utm_content=profile&utm_medium=member_android';
+
+function TikTokIcon({ size = 19 }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" />
+    </svg>
+  );
+}
+
 const SOCIAL_LINKS = [
-  { name: 'WhatsApp', href: 'https://wa.me/233557590224', icon: MessageCircle },
+  { name: 'WhatsApp', href: 'https://wa.me/233243788907', icon: MessageCircle },
   { name: 'Facebook', href: FACEBOOK_URL, icon: Facebook },
   { name: 'Instagram', href: INSTAGRAM_URL, icon: Instagram },
+  { name: 'TikTok', href: TIKTOK_URL, icon: TikTokIcon },
+  { name: 'LinkedIn', href: LINKEDIN_URL, icon: Linkedin },
 ];
 
 export default function Footer() {

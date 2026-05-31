@@ -321,17 +321,17 @@ export default function MenuPreview({ detailed = false }) {
                   Local dishes before the live band
                 </h2>
                 <p className="mt-4 max-w-2xl text-slate-700 leading-relaxed md:text-lg">
-                  Local dishes are available from <strong>11:00 AM to 9:00 PM</strong>, giving guests
-                  time to enjoy a proper meal before the live band starts.
+                  Local dishes are available from <strong>11:00 AM to 4:00 PM</strong> on weekdays
+                  and <strong>11:00 AM to 5:00 PM</strong> on weekends.
                 </p>
                 <div className="mt-6 grid gap-3 sm:grid-cols-2">
                   <div className="rounded-2xl bg-[#FFF8EC] px-4 py-3">
                     <p className="text-xs font-bold uppercase tracking-[0.16em] text-slate-500">Serving Time</p>
-                    <p className="mt-1 font-menu-text text-xl font-bold text-brand-brown">11:00 AM - 9:00 PM</p>
+                    <p className="mt-1 font-menu-text text-xl font-bold text-brand-brown">11:00 AM - 4 PM (Weekdays) / 5 PM (Weekends)</p>
                   </div>
                   <div className="rounded-2xl bg-[#FFF8EC] px-4 py-3">
                     <p className="text-xs font-bold uppercase tracking-[0.16em] text-slate-500">Best For</p>
-                    <p className="mt-1 font-menu-text text-xl font-bold text-brand-brown">Lunch, dinner, and pre-show meals</p>
+                    <p className="mt-1 font-menu-text text-xl font-bold text-brand-brown">Lunch and pre-show meals</p>
                   </div>
                 </div>
               </div>
