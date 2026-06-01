@@ -204,7 +204,7 @@ export default function BookingForm({ sectionId = 'booking' }) {
               Message us directly for a quick response and instant confirmation.
             </p>
             <a
-              href="https://wa.me/233557590224"
+              href="https://wa.me/233243788907"
               target="_blank"
               rel="noopener noreferrer"
               className="button-text bg-[#25D366] hover:bg-[#1ebe5d] text-white px-7 py-3.5 rounded-xl flex items-center gap-2.5 transition-all shadow-lg shadow-green-500/20 text-sm"

@@ -18,7 +18,7 @@ import {
 const menuPosterImage = '/images/menu/calenders-menu-poster.png';
 const worldCupPromoAlt =
   'Calenders World Cup Promo - 5% off meals on matchdays and chicken wings plus beer combo';
-const whatsAppLink = 'https://wa.me/233557590224';
+const whatsAppLink = 'https://wa.me/233243788907';
 
 export default function MenuPreview({ detailed = false }) {
   const [activeCategory, setActiveCategory] = useState('All');

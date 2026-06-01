@@ -8,7 +8,7 @@ const CONTACT_DETAILS = [
     label: 'Our Location',
     value: 'Revert Lane, Harbour Area (Near Vienna Beach), Takoradi, Ghana',
   },
-  { icon: Phone, label: 'Phone Number', value: '+233 50 258 4606 / 055 759 0224' },
+  { icon: Phone, label: 'Phone Number', value: '+233 24 378 8907' },
   { icon: Mail, label: 'Email Address', value: 'calenderseventsgh@gmail.com' },
 ];
 
