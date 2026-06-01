@@ -1,9 +1,13 @@
 import Gallery from '@/components/Gallery';
+import { createPageMetadata } from '@/lib/seo';
 
-export const metadata = {
-  title: 'Gallery | Calenders Events Bar & Lounge',
-  description: 'Browse moments from Calenders Events Bar & Lounge — garden dining, live entertainment, and celebrations in Takoradi.',
-};
+export const metadata = createPageMetadata({
+  title: 'Gallery | CalendersGH in Takoradi',
+  description:
+    'Browse photos from CalendersGH and Calenders Events Bar & Lounge in Takoradi, including garden dining, live entertainment, private events and celebrations.',
+  path: '/gallery',
+  image: '/images/events/calenders-events-wedding-04.webp',
+});
 
 export default function GalleryPage() {
   return (

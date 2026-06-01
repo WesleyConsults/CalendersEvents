@@ -39,7 +39,7 @@ export default function Navbar() {
         <Link href="/" className="flex items-center gap-2">
           <Image
             src="/calenders-wordmark.png"
-            alt="Calenders Events Logo"
+            alt="CalendersGH — Calenders Events Bar & Lounge logo"
             width={160}
             height={40}
             className="h-10 w-auto object-contain"

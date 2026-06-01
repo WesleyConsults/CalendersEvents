@@ -58,7 +58,7 @@ export default function Events({ detailed = false }) {
                     <br />
                     <Image
                       src="/calenders-wordmark.png"
-                      alt="Calenders"
+                      alt="CalendersGH — Calenders Events Bar & Lounge"
                       width={200}
                       height={44}
                       className="inline-block h-11 md:h-[4.4rem] lg:h-[5rem] w-auto mt-1"
@@ -69,7 +69,8 @@ export default function Events({ detailed = false }) {
               />
               <p className="text-lg text-slate-600 leading-relaxed max-w-2xl">
                 From weekly entertainment nights to fully hosted private celebrations, Calenders brings
-                food, drinks, music, and garden-style atmosphere together in one venue.
+                food, drinks, music, and garden-style atmosphere together in one Calenders
+                Takoradi venue.
               </p>
             </div>
 
@@ -80,7 +81,7 @@ export default function Events({ detailed = false }) {
             >
               <img
                 src="/images/lounge.jpeg"
-                alt="Calenders lounge and event atmosphere"
+                alt="Calenders Events Bar and Lounge event venue in Takoradi"
                 className="absolute inset-0 h-full w-full object-cover"
                 referrerPolicy="no-referrer"
               />
@@ -120,7 +121,7 @@ export default function Events({ detailed = false }) {
                 <div className="h-60 w-full overflow-hidden md:h-64">
                   <img
                     src={event.image}
-                    alt={event.title}
+                    alt={`${event.title} at Calenders Events Bar and Lounge in Takoradi`}
                     className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                 </div>
@@ -254,7 +255,7 @@ export default function Events({ detailed = false }) {
                   >
                     <img
                       src={item.image}
-                      alt={item.title}
+                      alt={`${item.title} at CalendersGH event venue in Takoradi`}
                       className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
                       referrerPolicy="no-referrer"
                     />

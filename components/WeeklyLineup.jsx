@@ -40,7 +40,7 @@ export default function WeeklyLineup({ variant = 'detailed' }) {
             >
               <img
                 src={WEEKLY_LINEUP_FLYER}
-                alt="Official Calenders weekly lineup flyer"
+                alt="Official CalendersGH weekly lineup flyer for live entertainment in Takoradi"
                 className="h-auto w-full"
               />
             </motion.figure>

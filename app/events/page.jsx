@@ -1,9 +1,13 @@
 import Events from '@/components/Events';
+import { createPageMetadata } from '@/lib/seo';
 
-export const metadata = {
-  title: "Upcoming Events | Calenders Events Bar & Lounge",
-  description: "Check out our weekly events including Reggae Thursdays, Karaoke Saturdays, and Sunday Live Band sessions.",
-};
+export const metadata = createPageMetadata({
+  title: 'Events at CalendersGH | Live Nights & Private Events',
+  description:
+    'Explore Calenders Events in Takoradi, including live entertainment, karaoke, watch parties, private celebrations and special nights at Calenders Events Bar & Lounge.',
+  path: '/events',
+  image: '/images/events/calenders-wedding-event.webp',
+});
 
 export default function EventsPage() {
   return (

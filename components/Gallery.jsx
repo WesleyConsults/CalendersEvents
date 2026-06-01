@@ -58,7 +58,7 @@ export default function Gallery() {
             >
               <img
                 src={src}
-                alt={`Gallery photo ${index + 1}`}
+                alt={`CalendersGH gallery photo ${index + 1} showing events, dining and lounge moments in Takoradi`}
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 referrerPolicy="no-referrer"
               />
@@ -114,7 +114,7 @@ export default function Gallery() {
               </button>
               <img
                 src={selectedImage}
-                alt={`Gallery photo ${selectedIndex + 1}`}
+                alt={`CalendersGH gallery photo ${selectedIndex + 1} showing events, dining and lounge moments in Takoradi`}
                 className="mx-auto max-h-[88vh] max-w-full rounded-2xl object-contain shadow-2xl"
                 referrerPolicy="no-referrer"
               />

@@ -17,7 +17,7 @@ import {
 
 const menuPosterImage = '/images/menu/calenders-menu-poster.png';
 const worldCupPromoAlt =
-  'Calenders World Cup Promo - 5% off meals on matchdays and chicken wings plus beer combo';
+  'CalendersGH World Cup promo flyer - 5% off meals on matchdays and chicken wings plus beer combo';
 const whatsAppLink = 'https://wa.me/233243788907';
 
 export default function MenuPreview({ detailed = false }) {
@@ -59,9 +59,9 @@ export default function MenuPreview({ detailed = false }) {
                       index === 0 ? 'sm:col-span-2 aspect-[16/9]' : 'aspect-[4/5]'
                     }`}
                   >
-                    <img
-                      src={space.image}
-                      alt={space.title}
+                      <img
+                        src={space.image}
+                      alt={`${space.title} at CalendersGH restaurant and bar in Takoradi`}
                       className="w-full h-full object-cover"
                       referrerPolicy="no-referrer"
                     />
@@ -144,7 +144,7 @@ export default function MenuPreview({ detailed = false }) {
                     <div className="relative aspect-[5/4] overflow-hidden">
                       <img
                         src={item.image}
-                        alt={item.name}
+                        alt={`${item.name} at CalendersGH restaurant and bar in Takoradi`}
                         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                         referrerPolicy="no-referrer"
                       />
@@ -324,7 +324,7 @@ export default function MenuPreview({ detailed = false }) {
               <div className="relative min-h-[260px] overflow-hidden lg:min-h-full">
                 <img
                   src="/images/local-dish-time.png"
-                  alt="Ghanaian local dishes with flag and meals"
+                  alt="CalendersGH local dishes at Calenders Events Bar and Lounge in Takoradi"
                   className="absolute inset-0 h-full w-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-black/5 to-transparent lg:bg-gradient-to-r" />

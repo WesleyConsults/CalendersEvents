@@ -8,21 +8,25 @@ const OFFERS = [
   {
     title: 'Events & Celebrations',
     image: '/images/offers/events-and-celebrations-card.png',
+    alt: 'Calenders Events Bar and Lounge event venue for celebrations in Takoradi',
     href: '/events',
   },
   {
     title: 'Restaurant & Bar',
     image: '/images/offers/restaurant-and-bar-card.png',
+    alt: 'CalendersGH restaurant and bar in Takoradi',
     href: '/restaurant',
   },
   {
     title: 'Live Entertainment',
     image: '/images/offers/live-entertainment-card.png',
+    alt: 'Live entertainment at Calenders Events Bar and Lounge',
     href: '/events',
   },
   {
     title: 'Garden Atmosphere',
     image: '/images/offers/garden-atmosphere-card.png',
+    alt: 'Calenders Takoradi garden atmosphere for dining and private events',
     href: '/about',
   },
 ];
@@ -35,12 +39,13 @@ export default function WhatWeOffer() {
           <p className="eyebrow mb-2">What We Offer</p>
           <h2 className="section-title text-brand-brown">One place for food, music, and memorable events</h2>
           <p className="mt-5 text-slate-600 leading-relaxed">
-            Calenders brings together private celebrations, dining, drinks, and live entertainment in a relaxed garden setting.
+            CalendersGH brings together private celebrations, dining, drinks, and live
+            entertainment in a relaxed garden setting in Takoradi.
           </p>
         </div>
 
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          {OFFERS.map(({ title, image, href }, index) => (
+          {OFFERS.map(({ title, image, alt, href }, index) => (
             <motion.article
               key={title}
               initial={{ opacity: 0, y: 20 }}
@@ -55,7 +60,7 @@ export default function WhatWeOffer() {
                 <div className="relative aspect-[4/3] overflow-hidden bg-brand-brown-light">
                   <Image
                     src={image}
-                    alt={title}
+                    alt={alt}
                     fill
                     sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
                     className="object-cover transition-transform duration-500 group-hover:scale-105"

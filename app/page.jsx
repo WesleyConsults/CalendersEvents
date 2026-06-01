@@ -5,6 +5,13 @@ import WhatWeOffer from '@/components/WhatWeOffer';
 import WeeklyLineup from '@/components/WeeklyLineup';
 import { GALLERY_IMAGES } from '@/lib/data';
 import { HOME_GALLERY_IMAGES } from '@/lib/homeGalleryImages';
+import { DEFAULT_DESCRIPTION, createPageMetadata } from '@/lib/seo';
+
+export const metadata = createPageMetadata({
+  title: 'CalendersGH | Calenders Events Bar & Lounge in Takoradi',
+  description: DEFAULT_DESCRIPTION,
+  path: '/',
+});
 
 const HOME_PRELOAD_IMAGES = [
   ...HOME_GALLERY_IMAGES.map(({ src }) => src),

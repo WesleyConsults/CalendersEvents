@@ -40,15 +40,15 @@ export default function Footer() {
             <Link href="/" className="flex items-center gap-2 mb-4 md:mb-6">
               <Image
                 src="/calenders-wordmark.png"
-                alt="Calenders Events Logo"
+                alt="CalendersGH — Calenders Events Bar & Lounge logo"
                 width={176}
                 height={44}
                 className="h-9 w-auto object-contain md:h-11"
               />
             </Link>
             <p className="text-sm md:text-base text-brand-cream/70 leading-6 md:leading-relaxed mb-5 md:mb-8">
-              The premier destination in Takoradi for events, dining, and vibrant nightlife. We bring
-              people together in our unique garden atmosphere.
+              CalendersGH — Calenders Events Bar &amp; Lounge, Revert Lane, Takoradi. The
+              premier Calenders Takoradi destination for events, dining, drinks, and vibrant nightlife.
             </p>
             <div className="flex flex-col gap-1.5 md:gap-2 text-[10px] md:text-xs font-bold uppercase tracking-[0.08em] text-brand-cream/40">
               <div className="flex items-center gap-2">
@@ -96,7 +96,7 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="pt-5 md:pt-8 border-t border-brand-cream/10 text-center text-xs md:text-sm text-brand-cream/50">
-          <p>&copy; 2026 Calenders Events. All rights reserved.</p>
+          <p>&copy; 2026 CalendersGH — Calenders Events Bar &amp; Lounge, Revert Lane, Takoradi.</p>
         </div>
       </div>
     </footer>

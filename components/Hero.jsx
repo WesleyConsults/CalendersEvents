@@ -58,7 +58,9 @@ export default function Hero() {
 
           {/* Subtext */}
           <p className="text-lg md:text-xl text-white/75 mb-10 max-w-xl leading-relaxed font-light">
-            Located in the heart of Takoradi&apos;s Harbour Area. Experience the perfect blend of garden-style dining and vibrant entertainment.
+            Welcome to CalendersGH, home of Calenders Events Bar &amp; Lounge in Takoradi.
+            Also searched as Calenders GH or CalendarsGH, we bring garden-style dining,
+            drinks, private events, and vibrant entertainment together in the Harbour Area.
           </p>
 
           {/* CTAs */}

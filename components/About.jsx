@@ -14,22 +14,22 @@ const FEATURES = [
 const ABOUT_IMAGES = [
   {
     src: '/images/seatingdaytime.jpeg',
-    alt: 'Calenders daytime garden seating',
+    alt: 'CalendersGH restaurant and garden seating in Takoradi',
     className: 'translate-y-8',
   },
   {
     src: '/images/entrance.jpeg',
-    alt: 'Calenders venue entrance',
+    alt: 'CalendersGH venue entrance on Revert Lane in Takoradi',
     className: '',
   },
   {
     src: '/images/events/calenders-wedding-event.webp',
-    alt: 'Wedding event setup at Calenders',
+    alt: 'Calenders Events Bar and Lounge event venue for weddings',
     className: 'translate-y-8',
   },
   {
     src: '/images/events/calenders-movie-in-the-park-02.webp',
-    alt: 'Movie in the park guests at Calenders',
+    alt: 'Calenders Events movie in the park guests in Takoradi',
     className: '',
   },
 ];
@@ -70,9 +70,9 @@ export default function About() {
                 <span className="block">
                   Welcome to
                   <br />
-                  <Image
-                    src="/calenders-wordmark.png"
-                    alt="Calenders"
+                    <Image
+                      src="/calenders-wordmark.png"
+                      alt="CalendersGH — Calenders Events Bar & Lounge"
                     width={200}
                     height={44}
                     className="inline-block h-11 md:h-[4.4rem] lg:h-[5rem] w-auto mt-1"
@@ -82,6 +82,11 @@ export default function About() {
             />
             <p className="text-slate-600 text-lg mb-6 leading-relaxed">
               Calenders Events Bar &amp; Lounge is one of Takoradi&apos;s warmest destinations for dining, drinks, entertainment, and private celebrations. Established in 2019, Calenders was created to help individuals, families, groups, and businesses plan memorable social events within the Sekondi-Takoradi metropolis.
+            </p>
+            <p className="text-slate-600 text-lg mb-6 leading-relaxed">
+              Guests often find us as CalendersGH, Calenders GH, Calenders Takoradi, or even
+              CalendarsGH, but the experience is the same: welcoming food, drinks, music, and events
+              at Revert Lane.
             </p>
             <p className="text-slate-600 text-lg mb-6 leading-relaxed">
               From open-air garden gatherings, Calenders offers flexible spaces for weddings, birthdays, corporate events, receptions, live shows, and private parties.
