@@ -5,6 +5,7 @@ import { motion } from 'motion/react';
 import { ChevronRight, Download, ExternalLink, Flame, Martini, MessageCircle, UtensilsCrossed } from 'lucide-react';
 import Link from 'next/link';
 import SectionHeading from '@/components/SectionHeading';
+import worldCupPromoFlyer from '@/picture asset/worldcup flyer 1.jpg';
 import {
   MENU_FILTERS,
   MENU_HIGHLIGHTS,
@@ -15,6 +16,8 @@ import {
 } from '@/lib/data';
 
 const menuPosterImage = '/images/menu/calenders-menu-poster.png';
+const worldCupPromoAlt =
+  'Calenders World Cup Promo - 5% off meals on matchdays and chicken wings plus beer combo';
 const whatsAppLink = 'https://wa.me/233557590224';
 
 export default function MenuPreview({ detailed = false }) {
@@ -236,6 +239,21 @@ export default function MenuPreview({ detailed = false }) {
                 </p>
               </div>
             </div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 18 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.08 }}
+              className="mx-auto w-full max-w-5xl rounded-[1.5rem] border border-[#E7D6C4] bg-[#FFFDF8] p-3 shadow-lg shadow-[#7A1D73]/10 md:rounded-[2rem] md:p-4"
+            >
+              <img
+                src={worldCupPromoFlyer.src}
+                alt={worldCupPromoAlt}
+                width={worldCupPromoFlyer.width}
+                height={worldCupPromoFlyer.height}
+                className="mx-auto h-auto w-full rounded-[1rem] object-contain md:rounded-[1.5rem]"
+              />
+            </motion.div>
 
             <div id="restaurant-menu" className="space-y-8">
               <div className="flex gap-3 overflow-x-auto pb-2 md:flex-wrap md:justify-center md:overflow-visible">
