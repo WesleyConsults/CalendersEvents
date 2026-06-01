@@ -244,7 +244,7 @@ export default function MenuPreview({ detailed = false }) {
               initial={{ opacity: 0, y: 18 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.08 }}
-              className="mx-auto w-full max-w-5xl rounded-[1.5rem] border border-[#E7D6C4] bg-[#FFFDF8] p-3 shadow-lg shadow-[#7A1D73]/10 md:rounded-[2rem] md:p-4"
+              className="mx-auto w-full max-w-[760px] rounded-[1.5rem] border border-[#E7D6C4] bg-[#FFFDF8] p-3 shadow-lg shadow-[#7A1D73]/10 md:rounded-[2rem] md:p-4"
             >
               <img
                 src={worldCupPromoFlyer.src}
