@@ -198,10 +198,10 @@ export default function About() {
                   <div>
                     <h4 className="font-bold text-brand-brown">{review.name}</h4>
                     <div className="flex items-center gap-2 mt-1">
-                      <span className="text-xs font-semibold text-brand-green bg-brand-green/10 px-2.5 py-0.5 rounded-full">
+                      <span className="text-xs font-semibold text-brand-green">
                         {review.role}
                       </span>
-                      <span className="text-[11px] text-slate-400">
+                      <span className="text-xs text-slate-400">
                         &bull; {review.tag}
                       </span>
                     </div>
