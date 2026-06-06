@@ -41,6 +41,8 @@ const REVIEWS = [
     role: 'Verified Bride',
     tag: 'Wedding Reception',
     initials: 'EM',
+    fromColor: '#CE2932',
+    toColor: '#7A1D73',
     text: 'We hosted our wedding reception at Calenders, and it was absolutely magical! The garden setting is gorgeous, and having the bridal suite on-site made preparations so seamless. Our guests are still talking about the food and the beautiful venue. Highly recommend!',
   },
   {
@@ -49,6 +51,8 @@ const REVIEWS = [
     role: 'Regular Guest',
     tag: 'Lounge & Dining',
     initials: 'KB',
+    fromColor: '#E66C19',
+    toColor: '#CE2932',
     text: 'My go-to spot in Takoradi for a Friday night out. The cocktails are excellent, the local Ghanaian dishes are delicious, and the atmosphere in the open-air garden is unmatched. A must-visit!',
   },
   {
@@ -57,6 +61,8 @@ const REVIEWS = [
     role: 'Music Lover',
     tag: 'Entertainment & Atmosphere',
     initials: 'AB',
+    fromColor: '#EBA217',
+    toColor: '#E66C19',
     text: 'The weekly live band sessions are fantastic! It\'s the perfect place to unwind with friends after a busy week. The staff are incredibly friendly and the service is great. The combination of good food, drinks, and live entertainment makes it special.',
   },
 ];
@@ -192,7 +198,10 @@ export default function About() {
 
                 {/* User Info Footer */}
                 <div className="flex items-center gap-4 border-t border-brand-green/5 pt-6">
-                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-brand-green to-brand-brown-light text-white font-bold text-sm tracking-wider">
+                  <div 
+                    className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full text-white font-bold text-sm tracking-wider"
+                    style={{ background: `linear-gradient(135deg, ${review.fromColor}, ${review.toColor})` }}
+                  >
                     {review.initials}
                   </div>
                   <div>
