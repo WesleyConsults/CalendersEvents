@@ -2,7 +2,7 @@
 
 import { motion } from 'motion/react';
 import Image from 'next/image';
-import { Leaf, Wine, Music, User } from 'lucide-react';
+import { Leaf, Wine, Music, User, Star, Quote } from 'lucide-react';
 import SectionHeading from '@/components/SectionHeading';
 
 const FEATURES = [
@@ -31,6 +31,33 @@ const ABOUT_IMAGES = [
     src: '/images/events/calenders-movie-in-the-park-02.webp',
     alt: 'Calenders Events movie in the park guests in Takoradi',
     className: '',
+  },
+];
+
+const REVIEWS = [
+  {
+    name: 'Efua Mensah',
+    rating: 5,
+    role: 'Verified Bride',
+    tag: 'Wedding Reception',
+    initials: 'EM',
+    text: 'We hosted our wedding reception at Calenders, and it was absolutely magical! The garden setting is gorgeous, and having the bridal suite on-site made preparations so seamless. Our guests are still talking about the food and the beautiful venue. Highly recommend!',
+  },
+  {
+    name: 'Kofi Bentil',
+    rating: 5,
+    role: 'Regular Guest',
+    tag: 'Lounge & Dining',
+    initials: 'KB',
+    text: 'My go-to spot in Takoradi for a Friday night out. The cocktails are excellent, the local Ghanaian dishes are delicious, and the atmosphere in the open-air garden is unmatched. A must-visit!',
+  },
+  {
+    name: 'Abena Boateng',
+    rating: 5,
+    role: 'Music Lover',
+    tag: 'Entertainment & Atmosphere',
+    initials: 'AB',
+    text: 'The weekly live band sessions are fantastic! It\'s the perfect place to unwind with friends after a busy week. The staff are incredibly friendly and the service is great. The combination of good food, drinks, and live entertainment makes it special.',
   },
 ];
 
@@ -121,6 +148,67 @@ export default function About() {
                 </motion.div>
               ))}
             </div>
+          </div>
+        </div>
+
+        {/* Guest Reviews Section */}
+        <div className="mt-24 md:mt-32">
+          <SectionHeading
+            title="What Our Guests Say"
+            subtitle="Reviews & Testimonials"
+            centered={true}
+          />
+
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 mt-12">
+            {REVIEWS.map((review, index) => (
+              <motion.div
+                key={review.name}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1, duration: 0.5 }}
+                className="group relative flex flex-col justify-between overflow-hidden rounded-3xl border border-[#E7D6C4] bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+              >
+                {/* Decorative Quote Mark */}
+                <Quote className="absolute right-6 top-6 h-10 w-10 text-brand-green/10 transition-transform duration-300 group-hover:scale-110" />
+
+                <div>
+                  {/* Star Rating */}
+                  <div className="flex gap-1 mb-6">
+                    {Array.from({ length: review.rating }).map((_, i) => (
+                      <Star
+                        key={i}
+                        size={18}
+                        className="fill-brand-green text-brand-green"
+                      />
+                    ))}
+                  </div>
+
+                  {/* Review Text */}
+                  <p className="text-slate-600 leading-relaxed mb-8 relative z-10">
+                    &ldquo;{review.text}&rdquo;
+                  </p>
+                </div>
+
+                {/* User Info Footer */}
+                <div className="flex items-center gap-4 border-t border-brand-green/5 pt-6">
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-brand-green to-brand-brown-light text-white font-bold text-sm tracking-wider">
+                    {review.initials}
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-brand-brown">{review.name}</h4>
+                    <div className="flex items-center gap-2 mt-1">
+                      <span className="text-xs font-semibold text-brand-green bg-brand-green/10 px-2.5 py-0.5 rounded-full">
+                        {review.role}
+                      </span>
+                      <span className="text-[11px] text-slate-400">
+                        &bull; {review.tag}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
           </div>
         </div>
 
