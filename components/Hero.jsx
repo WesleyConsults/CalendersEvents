@@ -56,11 +56,9 @@ export default function Hero() {
             </em>
           </h1>
 
-          {/* Subtext */}
           <p className="text-lg md:text-xl text-white/75 mb-10 max-w-xl leading-relaxed font-light">
-            Welcome to CalendersGH, home of Calenders Events Bar &amp; Lounge in Takoradi.
-            Also searched as Calenders GH or CalendarsGH, we bring garden-style dining,
-            drinks, private events, and vibrant entertainment together in the Harbour Area.
+            Welcome to Calenders Events Bar &amp; Lounge. We bring garden-style dining,
+            drinks, private events, and vibrant entertainment together in Takoradi.
           </p>
 
           {/* CTAs */}

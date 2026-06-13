@@ -117,9 +117,7 @@ export default function About() {
               Calenders Events Bar &amp; Lounge is one of Takoradi&apos;s warmest destinations for dining, drinks, entertainment, and private celebrations. Established in 2019, Calenders was created to help individuals, families, groups, and businesses plan memorable social events within the Sekondi-Takoradi metropolis.
             </p>
             <p className="text-slate-600 text-lg mb-6 leading-relaxed">
-              Guests often find us as CalendersGH, Calenders GH, Calenders Takoradi, or even
-              CalendarsGH, but the experience is the same: welcoming food, drinks, music, and events
-              at Revert Lane.
+              Whether you are visiting for a casual dinner, a lively night out, or a special milestone, the experience is always the same: welcoming hospitality, delicious food, cold drinks, great music, and unforgettable events at Revert Lane.
             </p>
             <p className="text-slate-600 text-lg mb-6 leading-relaxed">
               From open-air garden gatherings, Calenders offers flexible spaces for weddings, birthdays, corporate events, receptions, live shows, and private parties.
