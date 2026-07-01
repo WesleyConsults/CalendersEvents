@@ -253,7 +253,7 @@ export default function About() {
                 we are a community, and we are honoured to be part of your celebrations.&rdquo;
               </blockquote>
               <div className="mt-6 border-l-4 border-brand-green pl-4">
-                <p className="font-bold text-brand-brown text-lg">Mr. Akwesi Bawuah</p>
+                <p className="font-bold text-brand-brown text-lg">Mr. Akwasi Bawuah</p>
                 <p className="text-sm text-slate-500">Chief Executive Officer, Calenders Events</p>
               </div>
             </div>
