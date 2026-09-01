@@ -104,6 +104,9 @@ export default function Footer() {
             className="inline-flex items-center gap-2 text-brand-cream/60 hover:text-brand-cream transition-colors group"
           >
             <span>Website created by</span>
+            <span className="font-bold text-brand-cream group-hover:text-brand-green transition-colors">
+              Wesley Consults
+            </span>
             <Image
               src="/images/wesley-consults-logo.png"
               alt="Wesley Consults"
