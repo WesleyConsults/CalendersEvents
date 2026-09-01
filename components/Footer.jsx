@@ -95,8 +95,23 @@ export default function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="pt-5 md:pt-8 border-t border-brand-cream/10 text-center text-xs md:text-sm text-brand-cream/50">
+        <div className="pt-5 md:pt-8 border-t border-brand-cream/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs md:text-sm text-brand-cream/50">
           <p>&copy; 2026 CalendersGH — Calenders Events Bar &amp; Lounge, Revert Lane, Takoradi.</p>
+          <a
+            href="https://wesleyconsults.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-brand-cream/60 hover:text-brand-cream transition-colors group"
+          >
+            <span>Website created by</span>
+            <Image
+              src="/images/wesley-consults-logo.png"
+              alt="Wesley Consults"
+              width={144}
+              height={38}
+              className="h-[29px] w-auto object-contain opacity-80 group-hover:opacity-100 transition-opacity"
+            />
+          </a>
         </div>
       </div>
     </footer>
